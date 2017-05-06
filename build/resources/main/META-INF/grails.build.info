@@ -1,0 +1,6 @@
+#Sat, 06 May 2017 08:42:27 +0530
+
+info.app.version=0.1
+info.app.name=linksharing
+grails.env=development
+info.app.grailsVersion=3.2.8

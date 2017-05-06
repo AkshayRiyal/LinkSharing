@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.grails:grails-plugin-events:3.2.8">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-events/3.2.8/b132536c0793062bd8a347a3574fc49940f02675/grails-plugin-events-3.2.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-events/3.2.8/8b8bb0c63e6fb54d3460ef40708c7a36ddb388b3/grails-plugin-events-3.2.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,7 @@
+dataSource:
+    pooled: true
+    jmxExport: true
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: Akshay.12345
+    dialect: org.hibernate.dialect.MySQL5InnoDBDialect
