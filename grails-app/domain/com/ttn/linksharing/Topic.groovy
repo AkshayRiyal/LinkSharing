@@ -1,7 +1,9 @@
 package com.ttn.linksharing
 
+import com.ttn.linksharing.co.ResourceSearchCO
 import com.ttn.linksharing.util.Seriousness
 import com.ttn.linksharing.util.Visibility
+import com.ttn.linksharing.vo.TopicVO
 
 
 class Topic {
@@ -42,6 +44,32 @@ class Topic {
     
     public String toString() {
         return this.name
+    }
+    
+    static List<TopicVO> getTrendingTopics() {
+        
+        List trendingTopics = Topic.createCriteria().list() {
+            //createAlias('resources', 'rsc')
+            projections {
+                groupProperty("id")
+                property("name")
+                property("visibility")
+                property("createdBy")
+                resources {
+                    count "id", "count"
+                }
+            }
+            
+            order("count", "desc")
+            order("name", "desc")
+            maxResults 5 // This is just for pagination
+            firstResult 0
+        }
+        List<TopicVO> topicVOList = []
+        trendingTopics.each {
+            topicVOList.add(new TopicVO(id: it.getAt(0), name: it.getAt(1), visibility: it.getAt(2), createdBy: it.getAt(3), count: it.getAt(4)))
+        }
+        
     }
     
 }

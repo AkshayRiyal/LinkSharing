@@ -1,15 +1,15 @@
 package com.ttn.linksharing
 
+import com.ttn.linksharing.co.ResourceSearchCO
 import com.ttn.linksharing.util.Visibility
 import org.hibernate.ObjectNotFoundException
 import org.springframework.context.MessageSource
 
 
 class TopicController {
-  def show(int id) {
-       
+  def show (ResourceSearchCO co){
    //    Topic topic= Topic.findById(id)
-      Topic topic=Topic.read(id)
+      Topic topic=Topic.read(co.topicId)
       if(topic)
         {
          if(topic.visibility==Visibility.PUBLIC)
@@ -65,4 +65,5 @@ class TopicController {
             render flash.error="Topic DoesNot Exist."
         }
     }
+
 }

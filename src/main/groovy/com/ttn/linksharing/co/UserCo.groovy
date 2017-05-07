@@ -1,4 +1,4 @@
-package com.ttn.linksharing.util
+package com.ttn.linksharing.co
 
 import grails.validation.Validateable
 import groovy.transform.ToString

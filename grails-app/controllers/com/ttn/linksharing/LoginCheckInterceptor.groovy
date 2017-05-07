@@ -5,7 +5,7 @@ class LoginCheckInterceptor {
 
     LoginCheckInterceptor()
     {
-       // matchAll().excludes(controller: "login")
+       matchAll().excludes(controller: "login")
     }
     boolean before() {
         if(session.user==null) {

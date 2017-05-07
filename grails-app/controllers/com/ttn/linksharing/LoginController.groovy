@@ -1,18 +1,16 @@
 package com.ttn.linksharing
 
-import com.ttn.linksharing.util.Constant
-import com.ttn.linksharing.util.UserCo
-
 class LoginController {
     
     def index() {
         //session.user="user1"
         if (session.user) {
-            forward(controller: "User")
+            forward(controller: "User",action:"index")
         } else {
             render "Failure"
+           /* render flash.error*/
         }
-        render flash.error
+       
     }
     
     def loginHandler(String username, String password) {
@@ -36,7 +34,7 @@ class LoginController {
     
     def logOut() {
         session.invalidate()
-        forward(controller: "Login", action: "index")
+        forward(controller: "login", action: "index")
     }
     
     def register() {

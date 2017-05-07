@@ -27,7 +27,7 @@ class UserSpec extends Specification {
         result == valid
         where:
         sno | email               | userName  | password   | fname    | lname   | photo | admin | active | valid
-        1   | "123"               | "sargam"  | ""         | null     | ""      | null  | true  | false  | false
+        1   | "123"               | "check"   | ""         | null     | ""      | null  | true  | false  | false
         2   | "akshay@gmail.com"  | "akshayr" | "check123" | "akshay" | "riyal" | null  | null  | null   | false
         3   | "akshay4@gmail.com" | "abcd"    | "098765"   | "akshay" | "riyal" | null  | true  | true   | true
     }

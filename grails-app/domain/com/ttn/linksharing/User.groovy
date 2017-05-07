@@ -1,5 +1,7 @@
 package com.ttn.linksharing
 
+import com.ttn.linksharing.co.SearchCO
+
 class User {
     String firstName;
     String lastName;
@@ -47,5 +49,53 @@ class User {
     }
     static mapping = {
         sort id: "desc" // or "asc"
+    }
+    
+    List getUnReadResources(SearchCO co) {
+        List list = []
+        if (co.q) {
+            list = User.createCriteria().list {
+                projections {
+                    readingItems
+                            {
+                                property('resource')
+                            }
+                }
+                
+                readingItems {
+                    eq('isRead', false)
+                }
+                
+                readingItems {
+                    resource {
+                        ilike('%description%', co.q)
+                    }
+                }
+                
+                eq('id', this.id)
+                
+                maxResults 5
+                firstResult 0
+            }
+            
+        } else {
+            list = User.createCriteria().list {
+                projections {
+                    readingItems
+                            {
+                                property('resource')
+                            }
+                }
+                readingItems {
+                    eq('isRead', false)
+                }
+                eq('id', this.id)
+                maxResults 5
+                firstResult 0
+            }
+            
+        }
+        println list
+        return list
     }
 }
