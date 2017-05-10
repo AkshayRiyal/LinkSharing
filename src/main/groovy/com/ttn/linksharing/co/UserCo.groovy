@@ -5,6 +5,10 @@ import groovy.transform.ToString
 
 @ToString
 class UserCo implements Validateable{
-    String username;
+    String firstName;
+    String lastName;
+    String email;
+    String userName
     String password;
+    String confirmPassword
 }

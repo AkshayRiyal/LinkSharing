@@ -3,6 +3,7 @@ package com.ttn.linksharing
 import com.ttn.linksharing.co.ResourceSearchCO
 import com.ttn.linksharing.util.Visibility
 import com.ttn.linksharing.vo.RatingInfoVO
+import com.ttn.linksharing.vo.ResourceVO
 import org.grails.datastore.mapping.query.Query
 
 abstract class Resource {
@@ -71,8 +72,34 @@ abstract class Resource {
             maxResults 5 // This is just for pagination
             firstResult 0
         }
-        println(list)
-        return list
+        List<ResourceVO> resourceVOList=[]
+        list.each {
+           resourceVOList.add(new ResourceVO(id: it.getAt(0),description: it.getAt(1),createdBy: it.getAt(2),topic: it.getAt(3),count: it.getAt(4)))
+        }
+       return resourceVOList
     }
+    static List getRecentPost() {
+        List list = Resource.createCriteria().list {
+            projections {
+                groupProperty("id")
+                property('description')
+                property('createdBy')
+                property('topic')
+                resourceRatings {
+                    count('id', "count")
+                }
+                
+            }
+            order("lastUpdated", "desc")
+            maxResults 3 // This is just for pagination
+            firstResult 0
+        }
+        List<ResourceVO> resourceVOList=[]
+        list.each {
+            resourceVOList.add(new ResourceVO(id: it.getAt(0),description: it.getAt(1),createdBy: it.getAt(2),topic: it.getAt(3),count: it.getAt(4)))
+        }
+        return resourceVOList
+    }
+    
     
 }

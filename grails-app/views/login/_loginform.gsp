@@ -6,9 +6,9 @@
             <span class="panel-title">Login</span>
         </div>
         <div class="panel-body">
-            <form class="form-signin" method="post" name="loginForm">
-                <input type="email" id="loginEmail" class="form-control" placeholder="Email address"  maxlength="30" required  autofocus="">
-                <input type="password" id="loginPassword" class="form-control" placeholder="Password" maxlength="15" required style="margin-top: 10px">
+            <form class="form-signin" method="post" name="loginForm" action="/login/loginHandler">
+                <input type="text" name="username" id="loginEmail" class="form-control" placeholder="User-Name"  maxlength="30" required >
+                <input type="password" name="password" id="loginPassword" class="form-control" placeholder="Password" maxlength="15" required style="margin-top: 10px">
                 <div class="checkbox">
                     <button class="btn btn-info" type="submit">Sign-in</button>
                     <label>
@@ -16,7 +16,13 @@
                     </label>
                 </div>
             </form>
+            <g:if test="${flash.error}">
+            <div class="alert alert-danger">
+                <strong>Wrong Credentials!</strong> Please check username or password.
+            </div>
+            </g:if>
         </div>
+
     </div>
 </div>
 <!--Login Form Ends-->

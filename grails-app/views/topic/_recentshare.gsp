@@ -6,19 +6,21 @@
         </div>
         <div class="panel-body">
             <!--FOr User Image,topic ,rating-->
-            <div class="row">
-                <div class="col-sm-3">
+           <g:if test="${resourceVos}">
+               <g:each in="${resourceVos as List<com.ttn.linksharing.vo.ResourceVO>}" var="vo">
+
+                   <div class="row">
+                    <div class="col-sm-3">
                    <asset:image class="user_img" src="user_img_default.png"/>
                 </div>
                 <div class="col-sm-9">
                     <div class="row">
-                        <div class="col-sm-3"><h4>User</h4></div>
-                        <div class="col-sm-3"><h5>@User</h5></div>
-                        <div class="col-sm-3 pull-right"><a><h5>Topic</h5></a></div>
+                        <div class="col-sm-4"><h4>${vo.createdBy.firstName} ${vo.createdBy.lastName}</h4></div>
+                        <div class="col-sm-3"><h5>@${vo.createdBy.userName}</h5></div>
+                        <div class="col-sm-2 pull-right"><a><h5>${vo.topic.name}</h5></a></div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-12">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
+                        <div class="col-sm-12">${vo.description}</div>
                     </div>
 
                     <div class="row">
@@ -34,8 +36,11 @@
                     </div>
 
                 </div>
-
+                   </div>
+               </g:each>
+           </g:if>
             </div>
+
         </div>
 
     </div>

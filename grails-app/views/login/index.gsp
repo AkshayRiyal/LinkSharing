@@ -6,9 +6,10 @@
 
 </head>
 <body>
+<g:render template="/topic/recentshare" model="[resourceVos:resourceVOs1]"/>
 <g:render template="loginform" />
-<g:render template="/topic/recentshare"/>
-<g:render template="/topic/trendingtopic" model="[topicVOs : topicVOs]"/>
 <g:render template="registerform"/>
+<g:render template="/topic/trendingtopic" model="[resourceVos : resourceVOs]"/>
+
 </body>
 </html>

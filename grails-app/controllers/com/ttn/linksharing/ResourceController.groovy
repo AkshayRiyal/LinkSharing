@@ -34,4 +34,6 @@ class ResourceController {
     def topPost() {
         render Resource.getTopPost()
     }
+    
+    
 }
