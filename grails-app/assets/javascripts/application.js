@@ -9,7 +9,7 @@
 //= require bootstrap
 //= require_tree .
 //= require_self
-
+//= require indexjs
 if (typeof jQuery !== 'undefined') {
     (function($) {
         $(document).ajaxStart(function() {

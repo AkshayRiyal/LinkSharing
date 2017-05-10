@@ -7,6 +7,7 @@ import org.springframework.context.MessageSource
 
 
 class TopicController {
+    TopicService topicService
   def show (ResourceSearchCO co){
    //    Topic topic= Topic.findById(id)
       Topic topic=Topic.read(co.topicId)
@@ -41,8 +42,9 @@ class TopicController {
     def save(String name,String visibility)
     {
         Topic topic=new Topic(name: name,visibility: Visibility.stringToEnum(visibility),createdBy: User.findAllByUserName(session.user))
-        topic.save()
+        topic.save(flush:true)
         if(!topic.hasErrors()) {
+      
             flash.message = "Success"
         render flash.message
         }
@@ -52,7 +54,8 @@ class TopicController {
         render flash.error
             
         }
-        }
+       
+      }
     def delete(int id)
     {
         try {

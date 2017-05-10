@@ -1,16 +1,22 @@
 package com.ttn.linksharing
 
+import com.ttn.linksharing.vo.TopicVO
+
 class LoginController {
     
+    
     def index() {
-        //session.user="user1"
-        if (session.user) {
-            forward(controller: "User",action:"index")
-        } else {
-            render "Failure"
-           /* render flash.error*/
-        }
-       
+        /*    //session.user="user1"
+            if (session.user) {
+                forward(controller: "User",action:"index")
+            } else {
+                render "Failure"
+               *//* render flash.error*//*
+            }
+        */
+      
+      List<TopicVO> topicVOList= Topic.getTrendingTopics()
+        render(view: "/login/index",model: [topicVOs:topicVOList])
     }
     
     def loginHandler(String username, String password) {
@@ -45,5 +51,5 @@ class LoginController {
         }
         
     }
-   
+    
 }

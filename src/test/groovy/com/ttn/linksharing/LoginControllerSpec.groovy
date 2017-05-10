@@ -1,12 +1,14 @@
 package com.ttn.linksharing
 
 import com.ttn.linksharing.util.Constant
+import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
 import spock.lang.Specification
 
 /**
  * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
  */
+@Mock([User])
 @TestFor(LoginController)
 class LoginControllerSpec extends Specification {
     def "CheckIndexActionIfUser'sSessionIsSetThenRequestIsForwardToUserIndexAction"() {
@@ -37,9 +39,9 @@ class LoginControllerSpec extends Specification {
     }
     
     
-   /* def "CheckLoginHandlerUserIsAbleToLogin"() {
+   def "CheckLoginHandlerUserIsAbleToLogin"() {
         setup:
-        User user = new User(email: "check@gmail.com", userName: "check123", password: Constant.password, confirmPassword: Constant.password,firstName: "akshay", lastName: "riyal", photo: null,
+        User user = new User(email: "check@gmail.com", userName: "checkusername", password: "check123", confirmPassword: "checkusername",firstName: "akshay", lastName: "riyal", photo: null,
                 admin: true, active: true)
         user.save(flush: true)
         
@@ -47,31 +49,31 @@ class LoginControllerSpec extends Specification {
         controller.loginHandler(user.userName, user.password)
         
         then:
-        response.redirectedUrl == '/login/index'
+        response.redirectedUrl == '/user'
     }
-    
     def "CheckLoginHandlerUserIsNotActive"() {
         setup:
-        User user = new User(userName: "userNew", password: Constant.PASSWORD,
-                firstName: "Name", lastName: "Lname", email: "user@gmail.com", active: false)
+        User user = new User(email: "check@gmail.com", userName: "checkusername", password: "check123", confirmPassword: "checkusername",firstName: "akshay", lastName: "riyal", photo: null,
+                admin: true, active: false)
         user.save(flush: true)
         
         when:
-        controller.login(user.userName, user.password)
+        controller.loginHandler(user.userName, user.password)
         
         then:
-        flash.error == "User is not active"
+        flash.error == "Your account is not active"
     }
     
     def "CheckLoginHandlerUserIsNotFound"() {
         setup:
-        User user = new User(userName: "aa", password: Constant.PASSWORD,
-                firstName: "Name", lastName: "Lname", email: "aa@gmail.com")
-        
+        User user = new User(email: "check@gmail.com", userName: "checkusername", password: "check123", confirmPassword: "checkusername",firstName: "akshay", lastName: "riyal", photo: null,
+                admin: true, active: true)
+    
+    
         when:
-        controller.login(user.userName, user.password)
+        controller.loginHandler(user.userName, user.password)
         
         then:
-        flash.error == "User not found"
-    }*/
+        flash.error == 'User not found'
+    }
 }

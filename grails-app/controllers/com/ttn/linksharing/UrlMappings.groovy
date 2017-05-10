@@ -11,7 +11,7 @@ class UrlMappings {
         
         
         "/user"(controller: "User", action: "noAction")
-        "/"(controller: 'login', action: "index")
+        "/"(controller: "login" ,action: "index")
         "500"(view: '/error')
         "404"(view: '/notFound')
         "/errorTest"(redirect: [controller: 'topic', action: 'save'])

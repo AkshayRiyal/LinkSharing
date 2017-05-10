@@ -14,7 +14,8 @@ class SubscriptionController {
             Subscription subscription = new Subscription(topic: topic, user: user)
             subscription.save(flush:true)
             if (subscription.errors.hasErrors()) {
-                render subscription.errors.allErrors
+                //render subscription.errors.allErrors
+                render "Subscription Failed"
         
             } else {
                 render "Successfull Subscription"

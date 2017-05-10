@@ -65,11 +65,13 @@ class Topic {
             maxResults 5 // This is just for pagination
             firstResult 0
         }
+        
         List<TopicVO> topicVOList = []
         trendingTopics.each {
             topicVOList.add(new TopicVO(id: it.getAt(0), name: it.getAt(1), visibility: it.getAt(2), createdBy: it.getAt(3), count: it.getAt(4)))
         }
-        
+        println(topicVOList.get(0).properties)
+      return topicVOList
     }
     
 }
