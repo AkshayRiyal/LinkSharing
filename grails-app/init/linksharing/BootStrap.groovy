@@ -86,8 +86,8 @@ class BootStrap {
             println(Topic.count())
             Topic.all.each { topic ->
                 2.times {
-                    Resource linkResource = new LinkResource(url: link[it], description: topic.name, createdBy: topic.createdBy, topic: topic)
-                    Resource documentResource = new DocumentResource(filePath: doc[it], description: topic.name, createdBy: topic.createdBy, topic: topic)
+                    Resource linkResource = new LinkResource(url: link[it], description: "resource"+it, createdBy: topic.createdBy, topic: topic)
+                    Resource documentResource = new DocumentResource(filePath: doc[it], description: "resource"+it, createdBy: topic.createdBy, topic: topic)
                     linkResource.save(failOnError: true, flush: true)
                     documentResource.save(failOnError: true, flush: true)
                     if (linkResource.hasErrors())

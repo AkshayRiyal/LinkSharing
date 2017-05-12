@@ -6,9 +6,7 @@
 
 </head>
 <body>
-<g:render template="/topic/recentshare" model="[resourceVos:resourceVOs1]"/>
-<g:render template="loginform" />
-<g:render template="registerform"/>
-<ls:getTopPost/>
+<g:render template="inbox" model="[msgList : msgList]"/>
+<ls:getTrendingTopic/>
 </body>
 </html>

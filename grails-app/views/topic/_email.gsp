@@ -11,25 +11,24 @@
 
                 <div class="modal-body">
 
-
                     <div class="form-group">
-                        <label class="control-label col-sm-2" for="email" >Email:</label>
+                        <label class="control-label col-sm-2" for="email">Email:</label>
 
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Email"
+                                   required>
                         </div>
                     </div>
 
                     <div class="form-group">
 
-                        <label class="control-label col-sm-2" for="topic" >Visibility:</label>
+                        <label class="control-label col-sm-2" for="topic">Visibility:</label>
 
                         <div class="col-sm-10 ">
-                            <select class="form-control" id="topic" name="topic" required>
-                                <option value="PUBLIC">TOPIC</option>
-                                <option value="PRIVATE">TOPIC</option>
+                            <g:select from="${post}" class="form-control" name="topicId" id="Topic" optionKey="id"
+                                      optionValue="name">
 
-                            </select>
+                            </g:select>
                         </div>
                     </div>
 

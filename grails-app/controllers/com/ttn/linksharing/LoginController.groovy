@@ -10,14 +10,12 @@ class LoginController {
     def index() {
         
         if (session.user) {
-            forward(controller: "User", action: "index")
+            forward(controller: "User", action: "dashboard")
         } else {
             
             
-            List<ResourceVO> resourceVOS = Resource.getTopPost()
-            println resourceVOS
             List<ResourceVO> resourceVOS1 = Resource.getRecentPost()
-            render(view: "/login/index", model: [resourceVOs: resourceVOS, resourceVOs1: resourceVOS1])
+            render(view: "/login/index", model:  [resourceVOs1: resourceVOS1])
         }
         
     }
@@ -28,15 +26,15 @@ class LoginController {
         if (user) {
             if (user.isActive()) {
                 session.user = username
-                redirect(controller: "User")
+                redirect(controller: "User", action: "dashboard")
                 
             } else {
-                flash.error = 'Your account is not active'
+                flash.loginError = 'Your account is not active'
                 redirect(controller: "Login")
                 
             }
         } else {
-            flash.error = 'User not found'
+            flash.loginError = 'User not found'
             redirect(controller: "Login")
         }
     }

@@ -7,7 +7,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Create Topic</h4>
             </div>
-            <g:form class="form-horizontal" controller="topic" action="topicSave">
+            <g:form class="form-horizontal" controller="topic" action="save">
 
                 <div class="modal-body">
 
@@ -16,7 +16,7 @@
                         <label class="control-label col-sm-2" for="name" >Name:</label>
 
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="name" name="topicName" placeholder="Enter Name" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" required>
                         </div>
                     </div>
 

@@ -34,7 +34,7 @@ class Topic {
         Topic.withNewSession {
             Subscription subscription = new Subscription(topic: this, user: createdBy)
             
-            this.addToSubscriptions(subscription)
+            /*this.addToSubscriptions(subscription)*/
             if (subscription.hasErrors()) {
                 log.error("Subscription cannot be created")
             }
@@ -62,7 +62,7 @@ class Topic {
             
             order("count", "desc")
             order("name", "desc")
-            maxResults 5 // This is just for pagination
+            maxResults 3// This is just for pagination
             firstResult 0
         }
         
@@ -70,8 +70,19 @@ class Topic {
         trendingTopics.each {
             topicVOList.add(new TopicVO(id: it.getAt(0), name: it.getAt(1), visibility: it.getAt(2), createdBy: it.getAt(3), count: it.getAt(4)))
         }
-        println(topicVOList.get(0).properties)
-      return topicVOList
-    }
+            return topicVOList
+        }
+        
+        
+        static List<User> getSubscribedUser(Long topicId) {
+            List<User> userList = Subscription.createCriteria().list {
+                projections {
+                    property('user')
+                }
+                eq('topic', Topic.get(topicId))
+            }
+            
+        }
+        
     
 }

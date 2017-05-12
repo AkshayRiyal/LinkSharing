@@ -50,6 +50,16 @@ class User {
     static mapping = {
         sort id: "desc" // or "asc"
     }
+    static List<Topic> getSubscribedTopics(User user)
+    {
+        List<Topic> topicList=Subscription.createCriteria().list {
+            projections{
+                property('topic')
+            }
+            eq('user',user)
+        }
+        return topicList
+    }
     
     List getUnReadResources(SearchCO co) {
         List list = []
@@ -60,6 +70,7 @@ class User {
                             {
                                 property('resource')
                             }
+                
                 }
                 
                 readingItems {

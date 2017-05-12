@@ -6,16 +6,16 @@ import org.hibernate.criterion.Projection
 
 class UserController {
     
-    def index(SearchCO co) {
-        render session.user
+    def dashboard(SearchCO co) {
+      /*  render session.user
         User user = User.findByUserName(session.user)
-        render user.getUnReadResources(co)
+        render user.getUnReadResources(co)*/
+        User user=User.findByUserName(session.user)
+        List msgList=user.getUnReadResources(co)
+        List<Topic> topicList=User.getSubscribedTopics(user)
+        println(topicList)
+        render (view:"/user/dashboard",model: [msgList:msgList,post:topicList])
     }
     
-    def UpdateIsRead(Long id, Boolean isRead) {
-       if( ReadingItem.executeUpdate('Update ReadingItem set isRead=:read where id=:i',[read:isRead,i:id]))
-           render "Success"
-        else
-           render "Failure"
-    }
+    
 }

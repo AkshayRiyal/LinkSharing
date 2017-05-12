@@ -16,7 +16,7 @@
                     </label>
                 </div>
             </form>
-            <g:if test="${flash.error}">
+            <g:if test="${flash.loginError}">
             <div class="alert alert-danger">
                 <strong>Wrong Credentials!</strong> Please check username or password.
             </div>

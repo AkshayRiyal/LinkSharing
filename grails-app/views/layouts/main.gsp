@@ -49,27 +49,40 @@
                     </div>
                     <!--            <button type="submit" class="btn btn-default">Submit</button>-->
                 </form></li>
-                %{--<g:if test="${session.user}">--}%
-                <li><a href="#createtopic" data-toggle="modal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></li>
-                <li><a href="#invitation" data-toggle="modal"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
-                <li><a href="#createlink" data-toggle="modal"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a></li>
-                <li><a href="#createdocument" data-toggle="modal"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a></li>
+                <g:if test="${session.user}">
+                    <li><a href="#createtopic" data-toggle="modal"><span class="glyphicon glyphicon-plus"
+                                                                         aria-hidden="true"></span></a></li>
+                    <li><a href="#invitation" data-toggle="modal"><span class="glyphicon glyphicon-envelope"
+                                                                        aria-hidden="true"></span></a></li>
+                    <li><a href="#createlink" data-toggle="modal"><span class="glyphicon glyphicon-link"
+                                                                        aria-hidden="true"></span></a></li>
+                    <li><a href="#createdocument" data-toggle="modal"><span class="glyphicon glyphicon-file"
+                                                                            aria-hidden="true"></span></a></li>
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">User <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Profile</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Logout</a></li>
-                    </ul>
-                </li>
-                %{--</g:if>--}%
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">${session.user} <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Profile</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/login/logOut">Logout</a></li>
+                        </ul>
+                    </li>
+                </g:if>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-
+<g:if test="${flash.error}">
+    <div class="alert alert-danger">
+        <strong>${flash.error}</strong>
+    </div>
+</g:if>
+<g:if test="${flash.message}">
+    <div class="alert alert-success">
+        <strong>${flash.message}</strong>
+    </div>
+</g:if>
 <g:layoutBody/>
 
 <div class="footer" role="contentinfo"></div>
@@ -77,6 +90,7 @@
 <div id="spinner" class="spinner" style="display:none;">
     <g:message code="spinner.alt" default="Loading&hellip;"/>
 </div>
+
 <g:render template="/topic/create"/>
 <g:render template="/topic/email"/>
 <g:render template="/linkresource/create"/>

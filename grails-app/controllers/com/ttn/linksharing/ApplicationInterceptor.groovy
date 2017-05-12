@@ -3,7 +3,7 @@ package com.ttn.linksharing
 
 class ApplicationInterceptor {
     ApplicationInterceptor() {
-        matchAll()
+      //  matchAll()
     }
     
     boolean before() {

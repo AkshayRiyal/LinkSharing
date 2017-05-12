@@ -34,6 +34,10 @@ class ResourceController {
     def topPost() {
         render Resource.getTopPost()
     }
+    def update(int id)
+    {
+      Resource resource= Resource.get(id);
+    }
     
     
 }

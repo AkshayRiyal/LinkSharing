@@ -31,7 +31,7 @@
                        style="margin-top: 10px"/>
                 <input type="text" name="userName" pattern=".{3,20}" title="min. 3 characters" maxlength="20"
                        class="form-control" placeholder="User Name" required style="margin-top: 10px"/>
-                <input type="password" name="password" class="form-control" placeholder="Password" required
+                <input type="password" name="password" pattern=".{5,20}" class="form-control" placeholder="Password" required
                        style="margin-top: 10px"/>
                 <input type="password" name="confirmPassword" class="form-control" placeholder="Confirm Password"
                        required style="margin-top: 10px"/>

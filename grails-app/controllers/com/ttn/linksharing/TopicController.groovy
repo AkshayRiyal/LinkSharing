@@ -9,7 +9,6 @@ import org.springframework.context.MessageSource
 class TopicController {
     TopicService topicService
   def show (ResourceSearchCO co){
-   //    Topic topic= Topic.findById(id)
       Topic topic=Topic.read(co.topicId)
       if(topic)
         {
@@ -27,15 +26,16 @@ class TopicController {
              else
              {
                  flash.error="Topic is private"
-                 redirect(controller:"login",action:"index")
+                 /* redirect(controller:"login",action:"index")*/
              }
          }
         }
         else
         {
             flash.error="Topic doesnot exist"
-            redirect(controller:"login",action:"index")
+           /* redirect(controller:"login",action:"index")*/
         }
+      render (view:"/topic/show" )
         
     }
     
@@ -45,16 +45,14 @@ class TopicController {
         topic.save(flush:true)
         if(!topic.hasErrors()) {
       
-            flash.message = "Success"
-        render flash.message
+            flash.message = "Topic successfully created. "
         }
         else {
             //log.error(topic.errors.allErrors)
-            flash.error="Topic cannot be Created"
-        render flash.error
+            flash.error="Topic cannot be created."
             
         }
-       
+       redirect(controller: 'user',action: 'dashboard')
       }
     def delete(int id)
     {
@@ -68,5 +66,5 @@ class TopicController {
             render flash.error="Topic DoesNot Exist."
         }
     }
-
+   
 }
