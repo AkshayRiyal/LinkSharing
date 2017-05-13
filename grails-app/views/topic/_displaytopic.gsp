@@ -29,6 +29,7 @@
                             <h6><ls:getPostCount topicId="${topic.id}"/> </h6>
 
                         </div>
+                        <ls:canEdit topic="${topic}"/>
                     </div>
 
                     <hr/>

@@ -103,4 +103,24 @@ class ApplicationTagLib {
                 }
             }
     }
+    
+    def canEdit = { attrs ->
+        User user = User.findByUserName(session.user)
+        if (user == attrs.topic.createdBy) {
+            out << " <div class=\"row pull-right\">\n" +
+                    "            <div class=\"col-sm-1\">\n" +
+                    "            <a href=\"\"> <span class=\"glyphicon glyphicon-envelope\"></span></a>\n" +
+                    "            </div>\n" +
+                    "\n" +
+                    "                    <div class=\"col-sm-1\">\n" +
+                    "                        <a href=\"\"> <span class=\"glyphicon glyphicon-pencil\"></span></a>\n" +
+                    "                    </div>\n" +
+                    "            <div class=\"col-sm-1\">\n" +
+                    "            <a href=\"/topic/delete?topicId=${attrs.topic.id}\"> <span class=\"glyphicon glyphicon-trash\"></span></a>\n" +
+                    "            </div>\n" +
+                    "                    </div>  "
+        }
+        
+        
+    }
 }

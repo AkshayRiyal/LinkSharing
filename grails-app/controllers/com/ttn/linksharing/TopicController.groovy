@@ -38,17 +38,19 @@ class TopicController {
         }
        redirect(controller: 'user',action: 'dashboard')
       }
-    def delete(int id)
+    def delete(int topicId)
     {
         try {
-            Topic topic = Topic.load(id)
+            Topic topic = Topic.get(topicId)
+            println ("---------id===${topicId}----------------topic===${topic}")
             topic.delete(flush: true)
-                render "Topic of id:${id} is deleted"
+                flash.message="Topic ${topic.name} deleted."
             }
         catch (ObjectNotFoundException e)
         {
-            render flash.error="Topic DoesNot Exist."
+           flash.error="Topic DoesNot Exist."
         }
+        redirect(controller: 'user',action: 'dashboard')
     }
    
 }
