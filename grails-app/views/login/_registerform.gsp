@@ -31,9 +31,9 @@
                        style="margin-top: 10px"/>
                 <input type="text" name="userName" pattern=".{3,20}" title="min. 3 characters" maxlength="20"
                        class="form-control" placeholder="User Name" required style="margin-top: 10px"/>
-                <input type="password" name="password" pattern=".{5,20}" class="form-control" placeholder="Password" required
+                <input type="password" name="password" pattern=".{5,15}" id="password" title="range 5-15" class="form-control" placeholder="Password" required
                        style="margin-top: 10px"/>
-                <input type="password" name="confirmPassword" class="form-control" placeholder="Confirm Password"
+                <input type="password" name="confirmPassword" id="confirmPassword" pattern=".{5,15}" title="range 5-15" class="form-control" placeholder="Confirm Password"
                        required style="margin-top: 10px"/>
                 <label class="btn btn-block  btn-default btn-file" style="margin-top: 10px;color:slategray">
                     Choose Profile Photo <input type="file" hidden>

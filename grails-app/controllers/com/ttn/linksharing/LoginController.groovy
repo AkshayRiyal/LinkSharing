@@ -49,13 +49,20 @@ class LoginController {
         User user = new User()
         bindData(user, userCo)
         user.save(flush: true)
-        if (user.hasErrors()) {
-            flash.signupError = user.errors.allErrors.collect { message(error: it) }
-        } else {
-            flash.signupMessage = "You are registered successfully."
+        if(user.password!=user.confirmPassword)
+        {
+            flash.signupError=["Passwords Doesn't Match"]
+            redirect(controller: "Login")
+    
         }
-        redirect(controller: "Login")
-      
+        else {
+            if (user.hasErrors()) {
+                flash.signupError = user.errors.allErrors.collect { message(error: it) }
+            } else {
+                flash.signupMessage = "You are registered successfully."
+            }
+            redirect(controller: "Login")
+        }
   
     }
     

@@ -67,7 +67,8 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">${session.user} <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Profile</a></li>
+                            <li><a href="">Profile</a></li>
+                            <li><a href="/user/edit">Edit</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="/login/logOut">Logout</a></li>
                         </ul>
