@@ -22,11 +22,11 @@
 
                     <div class="form-group">
 
-                        <label class="control-label col-sm-2" for="topic">Visibility:</label>
+                        <label class="control-label col-sm-2" for="topic">Topic:</label>
 
                         <div class="col-sm-10 ">
                             <g:select from="${post}" class="form-control" name="topicId" id="Topic" optionKey="id"
-                                      optionValue="name">
+                                      optionValue="name" >
 
                             </g:select>
                         </div>

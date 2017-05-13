@@ -1,3 +1,4 @@
+/*
 package linksharing
 
 import com.ttn.linksharing.DocumentResource
@@ -16,11 +17,16 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.ApplicationContext
 
 class BootStrap {
-    @Autowired
+    */
+/*@Autowired
     GrailsApplication grailsApplication
-    
+    *//*
+
     def init = { servletContext ->
-        /* grailsApplication.config.getProperty()*/
+ */
+/*grailsApplication.config.getProperty()
+*//*
+
         try {
             createUser()
             createTopics()
@@ -78,7 +84,6 @@ class BootStrap {
     }
     
     void createResources() {
-        
         if (Resource.count() == 0) {
             def link = ["https://www.stackOverflow.com/grails", "https://www.stackOverflow.com/java"]
             def description = ["Grails", "Java"]
@@ -95,9 +100,10 @@ class BootStrap {
                     if (documentResource.hasErrors())
                         log.error("Error while Saving DocumentResource")
                 }
-                
+            
             }
         }
+        
         
         
     }
@@ -156,3 +162,4 @@ class BootStrap {
         }
     }
 }
+*/

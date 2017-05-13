@@ -14,29 +14,13 @@ class TopicController {
         {
          if(topic.visibility==Visibility.PUBLIC)
          {
-             render "Success!!!"
-         }
-            else {
-             User user=User.findByUserName(session.user)
-             Subscription subscription=Subscription.findByUserAndTopic(user,topic)
-             if(subscription)
-             {
-                 render "Success!!!"
-             }
-             else
-             {
-                 flash.error="Topic is private"
-                 /* redirect(controller:"login",action:"index")*/
-             }
+             println(topic)
+    
+             render (view: "/topic/show",model:[topic:topic] )
+         
          }
         }
-        else
-        {
-            flash.error="Topic doesnot exist"
-           /* redirect(controller:"login",action:"index")*/
-        }
-      render (view:"/topic/show" )
-        
+           
     }
     
     def save(String name,String visibility)

@@ -1,10 +1,6 @@
-<div class="container-fluid col-md-6 col-sm-12 col-xs-12 pull-right my-panel">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <span class="panel-title">Inbox</span>
-        </div>
+<%@ page import="com.ttn.linksharing.User" %>
 
-        <div class="panel-body">
+<div class="panel-body">
 
         <!--FOr User Image,topic ,rating-->
             <g:if test="${msgList}">
@@ -23,8 +19,9 @@
                         <div class="col-sm-2">
                             <h6>@${msg.createdBy.userName}</h6>
                         </div>
+
                         <div class="col-sm-2">
-                            <h6>${msg.topic.name}</h6>
+                        <g:link controller="topic" action="show" params="[topicId:msg.topic.id]" ><h6>${msg.topic.name}</h6></g:link>
                         </div>
 
 
@@ -75,7 +72,7 @@
                                     </g:if>
 
                                     <g:if test="${msg.class.toString() == 'class com.ttn.linksharing.LinkResource'}">
-                                        <a href="#"><p class="post-option">View-Site</p></a>
+                                        <a href="${msg.url}"><p class="post-option">View-Site</p></a>
                                     </g:if>
                                 </div>
 
@@ -84,9 +81,8 @@
                                     %{--<a href="/topic/updateRead/${msg.id}"><p class="post-option">Mark-Read</p></a>--}%
                                 </div>
 
-
                                 <div class="col-sm-4">
-                                    <a href="#"><p class="post-option">View-Post</p></a>
+                                    <a href="/resource/show/${msg.id}"><p class="post-option">View-Post</p></a>
                                 </div>
                             </div>
                         </div>

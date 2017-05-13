@@ -13,8 +13,11 @@ class UserController {
         User user=User.findByUserName(session.user)
         List msgList=user.getUnReadResources(co)
         List<Topic> topicList=User.getSubscribedTopics(user)
-        println(topicList)
-        render (view:"/user/dashboard",model: [msgList:msgList,post:topicList])
+        
+        List<User> userList=[]
+        
+        userList.add(User.findByUserName(session.user))
+        render (view:"/user/dashboard",model: [msgList:msgList,post:topicList,userList:userList])
     }
     
     

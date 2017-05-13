@@ -25,7 +25,7 @@
                         <label class="control-label col-sm-2" for="visibility" >Visibility:</label>
 
                         <div class="col-sm-10 ">
-                            <select class="form-control" name="visibility" required>
+                            <select class="form-control" id="visibility" name="visibility" required>
                                 <option value="PUBLIC">PUBLIC</option>
                                 <option value="PRIVATE">PRIVATE</option>
 

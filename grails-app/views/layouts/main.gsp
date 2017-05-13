@@ -40,11 +40,15 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
             <ul class="nav navbar-nav navbar-right">
-                <li><form class="navbar-form">
+                <li><form class="navbar-form" action="/resource/searchByQuery" method="post">
                     <div class="form-group">
                         <div class="inner-addon left-addon">
+
                             <i class="glyphicon glyphicon-search"></i>
-                            <input type="text" class="form-control search-box" placeholder="search"/>
+                            <input type="text" name="query" onkeydown="if (event.keyCode == 13) {
+                                this.form.submit();
+                                return false;
+                            }" class="form-control search-box" placeholder="search"/>
                         </div>
                     </div>
                     <!--            <button type="submit" class="btn btn-default">Submit</button>-->

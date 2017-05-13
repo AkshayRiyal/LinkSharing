@@ -6,32 +6,35 @@ import com.ttn.linksharing.util.Visibility
 
 class SubscriptionController {
    
-    def save(int topicid) {
+    def save(int topicId) {
             User user = User.findByUserName(session.user)
-            Topic topic = Topic.findById(topicid)
+            Topic topic = Topic.findById(topicId)
         
 
             Subscription subscription = new Subscription(topic: topic, user: user)
             subscription.save(flush:true)
+        
             if (subscription.errors.hasErrors()) {
-                //render subscription.errors.allErrors
-                render "Subscription Failed"
+                flash.error="Subscription Failed"
         
             } else {
-                render "Successfull Subscription"
+                flash.message="Subscribed New Topic"
             }
-        
+        redirect(controller:'user',action:'dashboard')
     }
     
    
-    def delete(int id) {
-        Subscription subscription = Subscription.get(id)
+    def delete(int topicId) {
+      Topic topic = Topic.get(topicId)
+        Subscription subscription = Subscription.findByTopicAndUser(topic,User.findByUserName(session.user))
+        println("Subscription Object--------------"+topicId)
         if (subscription) {
             subscription.delete(flush:true)
-            render "Subscription Deleted"
+            flash.message ="Un-subscribed to ${topic}"
         } else {
-            render "Subscription Doesnot Exist"
+          flash.error="Action Failed"
         }
+        redirect(controller:'user',action:'dashboard')
     }
     
     def update(int id, String seriousness) {

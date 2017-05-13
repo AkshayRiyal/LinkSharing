@@ -23,16 +23,17 @@ class LoginController {
     def loginHandler(String username, String password) {
         
         User user = User.findByUserNameAndPassword(username, password)
+        println(user)
         if (user) {
-            if (user.isActive()) {
+         /*   if (user.isActive()) {*/
                 session.user = username
                 redirect(controller: "User", action: "dashboard")
-                
+           /*
             } else {
                 flash.loginError = 'Your account is not active'
                 redirect(controller: "Login")
                 
-            }
+            }*/
         } else {
             flash.loginError = 'User not found'
             redirect(controller: "Login")

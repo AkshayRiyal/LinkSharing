@@ -1,9 +1,3 @@
-<!--Recent Share COnatiner-->
-<div class="container-fluid col-md-7 col-sm-12 col-xs-12 pull-left my-panel">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <span class="panel-title">Recent Shares</span>
-        </div>
 
         <div class="panel-body">
         <!--FOr User Image,topic ,rating-->

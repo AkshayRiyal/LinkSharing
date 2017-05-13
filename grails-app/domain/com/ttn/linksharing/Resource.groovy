@@ -39,7 +39,7 @@ abstract class Resource {
     }
     
     
-   static RatingInfoVO getRatingInformation(long id) {
+    static RatingInfoVO getRatingInformation(long id) {
         List result = Resource.createCriteria().list {
             projections {
                 resourceRatings {
@@ -51,7 +51,7 @@ abstract class Resource {
             }
         }
         
-       println(result)
+        println(result)
         return new RatingInfoVO(totalVotes: result.get(0).getAt(0), totalScore: result.get(0).getAt(1), averageScore: result.get(0).getAt(2))
     }
     
@@ -72,12 +72,13 @@ abstract class Resource {
             maxResults 5 // This is just for pagination
             firstResult 0
         }
-        List<ResourceVO> resourceVOList=[]
+        List<ResourceVO> resourceVOList = []
         list.each {
-           resourceVOList.add(new ResourceVO(id: it.getAt(0),description: it.getAt(1),createdBy: it.getAt(2),topic: it.getAt(3),count: it.getAt(4)))
+            resourceVOList.add(new ResourceVO(id: it.getAt(0), description: it.getAt(1), createdBy: it.getAt(2), topic: it.getAt(3), count: it.getAt(4)))
         }
-       return resourceVOList
+        return resourceVOList
     }
+    
     static List getRecentPost() {
         List list = Resource.createCriteria().list {
             projections {
@@ -94,12 +95,41 @@ abstract class Resource {
             maxResults 3 // This is just for pagination
             firstResult 0
         }
-        List<ResourceVO> resourceVOList=[]
+        List<ResourceVO> resourceVOList = []
         list.each {
-            resourceVOList.add(new ResourceVO(id: it.getAt(0),description: it.getAt(1),createdBy: it.getAt(2),topic: it.getAt(3),count: it.getAt(4)))
+            resourceVOList.add(new ResourceVO(id: it.getAt(0), description: it.getAt(1), createdBy: it.getAt(2), topic: it.getAt(3), count: it.getAt(4)))
         }
         return resourceVOList
     }
     
-    
+    def afterInsert = {
+        
+        Resource.withNewSession {
+            println("hello")
+            this.topic.subscriptions.each {
+                if (!(it.user.toString() == this.createdBy.toString())) {
+                    println("${it.user}--------------${this.createdBy}")
+                    if (new ReadingItem(user: it.user, resource: this, isRead: false).save(flush: true))
+                        
+                        println("success")
+                    else
+                        println("failure")
+                    
+                }
+            }
+        }
+        
+    }
+    static List<Resource> findResourceByQuery(String query) {
+        List<Resource> list = Resource.createCriteria().list {
+            projections {
+                createAlias('topic', 't')
+                or {
+                    ilike('description', "%${query}%")
+                    ilike('t.name', "%${query}%")
+                }
+            }
+        }
+        list
+    }
 }

@@ -1,3 +1,4 @@
+<%@ page import="com.ttn.linksharing.User" %>
 <div id="createlink" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
@@ -32,7 +33,7 @@
 
                         <label class="control-label col-sm-2" for="Topic">Topic:</label>
                         <div class="col-sm-10 ">
-                            <g:select   from="${post}" class="form-control" name="topicId" id="Topic" optionKey="id"  optionValue="name">
+                            <g:select from="${ User.getSubscribedTopics(com.ttn.linksharing.User.findByUserName(session.user) )}" class="form-control" name="topicId" id="Topic" optionKey="id" optionValue="name">
 
                             </g:select>
                         </div>

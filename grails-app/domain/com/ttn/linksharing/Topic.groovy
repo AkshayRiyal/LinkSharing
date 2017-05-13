@@ -33,7 +33,7 @@ class Topic {
         
         Topic.withNewSession {
             Subscription subscription = new Subscription(topic: this, user: createdBy)
-            
+            subscription.save(flush:true)
             /*this.addToSubscriptions(subscription)*/
             if (subscription.hasErrors()) {
                 log.error("Subscription cannot be created")

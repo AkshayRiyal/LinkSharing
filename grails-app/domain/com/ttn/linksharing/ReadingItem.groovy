@@ -1,7 +1,6 @@
 package com.ttn.linksharing
 
 class ReadingItem {
-    Resource resource
     Boolean isRead
     static  belongsTo = [user:User,resource:Resource]
     static constraints = {

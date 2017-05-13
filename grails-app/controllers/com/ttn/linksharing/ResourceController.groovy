@@ -26,17 +26,35 @@ class ResourceController {
         }
     }
     
+    def searchByQuery(String query) {
+        println("--------------------Inside Search By Query")
+        if (query || (session['user'] && User.findByUserName(session['user']).admin && !query)) {
+            log.info("validated")
+            List<Resource> resource=Resource.findResourceByQuery(query)
+            println("Search Result ${resource}")
+            render(view: '/resource/search', model: [searchResources: resource,
+                                            query          : query])
+        } else {
+            flash.error = "Enter some text in searchBox"
+            redirect(action: "index", controller: 'login')
+        }
+    }
+    
     def show(long id) {
-        render Resource.getRatingInformation(id)
         
+        //render Resource.getRatingInformation(id)
+        println("Resource id----------------" + id)
+        Resource resource = Resource.get(id)
+        println(resource)
+        render(view: '/resource/show', model: [resource: resource])
     }
     
     def topPost() {
         render Resource.getTopPost()
     }
-    def update(int id)
-    {
-      Resource resource= Resource.get(id);
+    
+    def update(int id) {
+        Resource resource = Resource.get(id);
     }
     
     
