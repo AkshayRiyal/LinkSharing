@@ -4,11 +4,11 @@
 
     <g:each in="${topics}" var="topic">
         <div class="row well">
-            <div class="col-sm-2">
+            <div class="col-sm-3">
                 <asset:image src="user_img_default.png" class="user_img"/>
             </div>
             %{--   point to check--}%
-            <div class="col-sm-8">
+            <div class="col-sm-7">
                 <div class="row">
                     <div class="col-sm-6"><h4>${topic.createdBy.fullName}</h4></div>
 

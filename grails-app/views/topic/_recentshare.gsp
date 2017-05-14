@@ -13,9 +13,9 @@
                             <div class="row">
                                 <div class="col-sm-4"><h4>${vo.createdBy.firstName} ${vo.createdBy.lastName}</h4></div>
 
-                                <div class="col-sm-3"><h5>@${vo.createdBy.userName}</h5></div>
+                                <div class="col-sm-4"><h5>@${vo.createdBy.userName}</h5></div>
 
-                                <div class="col-sm-2 pull-right"><a href="/topic/show?topicId=${vo.topic.id}"><h5>${vo.topic.name}</h5></a></div>
+                                <div class="col-sm-3 pull-right "><a href="/topic/show?topicId=${vo.topic.id}"><h5>${vo.topic.name}</h5></a></div>
                             </div>
 
                             <div class="row">
