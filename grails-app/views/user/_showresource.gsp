@@ -68,7 +68,7 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <g:if test="${msg.class.toString() == 'class com.ttn.linksharing.DocumentResource'}">
-                                        <a href="#"><p class="post-option">Download</p></a>
+                                        <g:link controller="documentResource" action="download" params="[resourceId:msg.id]"> <p class="post-option">Download</p></g:link>
                                     </g:if>
 
                                     <g:if test="${msg.class.toString() == 'class com.ttn.linksharing.LinkResource'}">

@@ -92,14 +92,16 @@ class ApplicationTagLib {
         attrs ->
             if (session.user) {
                 Topic topic = Topic.get(attrs.topicId)
-                Subscription subscription = Subscription.findByTopicAndUser(topic, User.findByUserName(session.user))
-                log.info(" in topicSubscribed : $topic $subscription")
-                if (subscription) {
-                    out << "<a href='${createLink(controller: 'subscription', action: 'delete', params: [topicId: attrs.topicId])}'>UnSubscribe</a>"
+                if(topic.createdBy!=User.findByUserName(session.user)) {
+                    Subscription subscription = Subscription.findByTopicAndUser(topic, User.findByUserName(session.user))
+                    log.info(" in topicSubscribed : $topic $subscription")
+                    if (subscription) {
+                        out << "<a href='${createLink(controller: 'subscription', action: 'delete', params: [topicId: attrs.topicId])}'>UnSubscribe</a>"
 // out << "<a href='javascript:void(0)' onclick='updateSubscription(${attrs.topicId},deleteSubscription)'>Unsubscribe</a> "
-                } else {
-                    out << "<a href='${createLink(controller: 'subscription', action: 'save', params: [topicId: attrs.topicId])}'>Subscribe</a>"
+                    } else {
+                        out << "<a href='${createLink(controller: 'subscription', action: 'save', params: [topicId: attrs.topicId])}'>Subscribe</a>"
 // out << "<a href='javascript:void(0)' onclick='updateSubscription(${attrs.topicId},save)'>Subscribe</a> "
+                    }
                 }
             }
     }
