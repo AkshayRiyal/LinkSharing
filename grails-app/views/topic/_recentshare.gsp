@@ -15,7 +15,7 @@
 
                                 <div class="col-sm-3"><h5>@${vo.createdBy.userName}</h5></div>
 
-                                <div class="col-sm-2 pull-right"><a><h5>${vo.topic.name}</h5></a></div>
+                                <div class="col-sm-2 pull-right"><a href="/topic/show?topicId=${vo.topic.id}"><h5>${vo.topic.name}</h5></a></div>
                             </div>
 
                             <div class="row">
@@ -33,7 +33,7 @@
                                 </div>
 
                                 <div class="col-sm-3 pull-right">
-                                    <a><p style="font-size:small"><u>View Full Post</u></p></a>
+                                    <a href="/resource/show?id=${vo.id}"><p style="font-size:small"><u>View Full Post</u></p></a>
                                 </div>
 
                             </div>

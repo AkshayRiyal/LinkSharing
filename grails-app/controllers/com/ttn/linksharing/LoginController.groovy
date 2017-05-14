@@ -13,9 +13,8 @@ class LoginController {
             forward(controller: "User", action: "dashboard")
         } else {
             
-            
             List<ResourceVO> resourceVOS1 = Resource.getRecentPost()
-            render(view: "/login/index", model:  [resourceVOs1: resourceVOS1])
+            render(view: "/login/index", model: [resourceVOs1: resourceVOS1])
         }
         
     }
@@ -25,15 +24,15 @@ class LoginController {
         User user = User.findByUserNameAndPassword(username, password)
         println(user)
         if (user) {
-         /*   if (user.isActive()) {*/
-                session.user = username
-                redirect(controller: "User", action: "dashboard")
-           /*
-            } else {
-                flash.loginError = 'Your account is not active'
-                redirect(controller: "Login")
-                
-            }*/
+            /*   if (user.isActive()) {*/
+            session.user = username
+            redirect(controller: "User", action: "dashboard")
+            /*
+             } else {
+                 flash.loginError = 'Your account is not active'
+                 redirect(controller: "Login")
+                 
+             }*/
         } else {
             flash.loginError = 'User not found'
             redirect(controller: "Login")
@@ -49,13 +48,11 @@ class LoginController {
         User user = new User()
         bindData(user, userCo)
         user.save(flush: true)
-        if(user.password!=user.confirmPassword)
-        {
-            flash.signupError=["Passwords Doesn't Match"]
+        if (user.password != user.confirmPassword) {
+            flash.signupError = ["Passwords Doesn't Match"]
             redirect(controller: "Login")
-    
-        }
-        else {
+            
+        } else {
             if (user.hasErrors()) {
                 flash.signupError = user.errors.allErrors.collect { message(error: it) }
             } else {
@@ -63,7 +60,7 @@ class LoginController {
             }
             redirect(controller: "Login")
         }
-  
+        
     }
     
 }

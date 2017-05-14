@@ -13,7 +13,6 @@
         <div class="panel-heading">
             <span class="panel-title">Recent Shares</span>
         </div>
-
         <g:render template="/topic/recentshare" model="[resourceVos: resourceVOs1]"/>
     </div>
 </div>

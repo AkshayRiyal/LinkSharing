@@ -5,6 +5,9 @@ class LoginCheckInterceptor {
     
     LoginCheckInterceptor() {
       matchAll().excludes(controller: "login")
+                 .excludes(controller:'resource')
+                  .excludes(controller:'documentResource')
+                  .excludes(controller:'topic')
     }
     
     boolean before() {

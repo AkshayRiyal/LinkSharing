@@ -18,8 +18,11 @@ class ApplicationTagLib {
                 eq('id', topicId)
             }
         } : 0
-        String url = createLink(controller: 'subscription', action: 'index', params: ['topicId': topicId])
+    /*    String url = createLink(controller: 'subscription', action: 'index', params: ['topicId': topicId])
         out << "<a href='${url}'>${subscriptionCount}</a>"
+    */
+        out << "${subscriptionCount}"
+    
     }
     def getTopPost = {
         out << render(template: '/topic/topshare', model: [resourceVOs: Resource.getTopPost()])
@@ -66,8 +69,9 @@ class ApplicationTagLib {
                 eq('id', topicId)
             }
         } : 0
-        String url = createLink(controller: 'resource', action: 'show', params: ['topicId': topicId])
+       /* String url = createLink(controller: 'resource', action: 'show', params: ['topicId': topicId])
         out << "<a href='${url}'>${postCount}</a> "
+       */ out << "${postCount}"
     }
     
     def getsearchedtopic = { attrs ->
@@ -92,7 +96,7 @@ class ApplicationTagLib {
         attrs ->
             if (session.user) {
                 Topic topic = Topic.get(attrs.topicId)
-                if(topic.createdBy!=User.findByUserName(session.user)) {
+                if (topic.createdBy != User.findByUserName(session.user)) {
                     Subscription subscription = Subscription.findByTopicAndUser(topic, User.findByUserName(session.user))
                     log.info(" in topicSubscribed : $topic $subscription")
                     if (subscription) {
@@ -125,4 +129,29 @@ class ApplicationTagLib {
         
         
     }
+    
+    def isResourceDeletable = { attrs ->
+        User user = User.findByUserName(session.user)
+        Resource resource = attrs.resource
+        if(user== resource.createdBy)
+                {
+                  String url=  createLink(controller: 'resource' ,action: 'delete',params:[resourceId:resource.id] )
+                    out << "<a href='${url}'>Delete</a>"
+                }
+        
+        
+    }
+    def isResourceEditable = { attrs ->
+        User user = User.findByUserName(session.user)
+        Resource resource = attrs.resource
+        if(user == resource.createdBy)
+                {
+                    String url=  createLink(controller: 'resource' ,action: 'edit',params:[resourceId:resource.id] )
+                    out << "<a href='${url}'>Edit</a>"
+                }
+        
+        
+    }
+    
 }
+    

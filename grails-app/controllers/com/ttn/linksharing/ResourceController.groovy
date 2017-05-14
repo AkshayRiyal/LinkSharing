@@ -7,14 +7,17 @@ class ResourceController {
     
     def index() {}
     
-    def delete(int id) {
+    def delete(int resourceId) {
         try {
-            Resource resource = Resource.load(id)
+            Resource resource = Resource.load(resourceId)
             resource.delete(flush: true)
-            render "Resource of id:${id} is deleted"
+           flash.message= "Post Deleted"
         }
         catch (ObjectNotFoundException e) {
-            render flash.error = "Resource DoesNot Exist."
+            flash.error = "Resource DoesNot Exist."
+        }
+        finally{
+            redirect(controller: 'user',action: 'dashboard')
         }
     }
     
@@ -43,9 +46,7 @@ class ResourceController {
     def show(long id) {
         
         //render Resource.getRatingInformation(id)
-        println("Resource id----------------" + id)
         Resource resource = Resource.get(id)
-        println(resource)
         render(view: '/resource/show', model: [resource: resource])
     }
     

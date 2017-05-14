@@ -82,13 +82,10 @@ abstract class Resource {
     static List getRecentPost() {
         List list = Resource.createCriteria().list {
             projections {
-                groupProperty("id")
+                property("id")
                 property('description')
                 property('createdBy')
                 property('topic')
-                resourceRatings {
-                    count('id', "count")
-                }
                 
             }
             order("lastUpdated", "desc")
@@ -97,7 +94,7 @@ abstract class Resource {
         }
         List<ResourceVO> resourceVOList = []
         list.each {
-            resourceVOList.add(new ResourceVO(id: it.getAt(0), description: it.getAt(1), createdBy: it.getAt(2), topic: it.getAt(3), count: it.getAt(4)))
+            resourceVOList.add(new ResourceVO(id: it.getAt(0), description: it.getAt(1), createdBy: it.getAt(2), topic: it.getAt(3), count: 0))
         }
         return resourceVOList
     }
@@ -105,7 +102,6 @@ abstract class Resource {
     def afterInsert = {
         
         Resource.withNewSession {
-            println("hello")
             this.topic.subscriptions.each {
                 if (!(it.user.toString() == this.createdBy.toString())) {
                     println("${it.user}--------------${this.createdBy}")

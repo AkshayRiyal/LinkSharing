@@ -43,7 +43,7 @@
 
                     <div class="row">
 
-                        <div class="container-fluid col-md-4 pull-left">
+                        <div class="container-fluid col-md-3 pull-left">
                             <div class="row">
                                 <div class="col-sm-1">
                                     <img src="http://vignette1.wikia.nocookie.net/logopedia/images/f/fb/Facebook_icon_2013.svg"
@@ -64,9 +64,25 @@
                         </div>
 
 
-                        <div class="container-fluid col-md-6 pull-right">
+                        <div class="container-fluid col-md-9 pull-right">
+
+
+
+
+
+
+
+
                             <div class="row">
-                                <div class="col-sm-4">
+                            <div class="col-sm-2">
+                            <ls:isResourceEditable resource="${msg}"/>
+                            </div>
+                                <div class="col-sm-2">
+                                    <ls:isResourceDeletable resource="${msg}"/>
+                                </div>
+
+                                <div class="col-sm-3">
+
                                     <g:if test="${msg.class.toString() == 'class com.ttn.linksharing.DocumentResource'}">
                                         <g:link controller="documentResource" action="download" params="[resourceId:msg.id]"> <p class="post-option">Download</p></g:link>
                                     </g:if>
@@ -76,12 +92,12 @@
                                     </g:if>
                                 </div>
 
-                                <div class="col-sm-4">
+                                <div class="col-sm-3">
                                     <ls:isResourceRead resourceId="$msg.id"/>
                                     %{--<a href="/topic/updateRead/${msg.id}"><p class="post-option">Mark-Read</p></a>--}%
                                 </div>
 
-                                <div class="col-sm-4">
+                                <div class="col-sm-2">
                                     <a href="/resource/show/${msg.id}"><p class="post-option">View-Post</p></a>
                                 </div>
                             </div>
