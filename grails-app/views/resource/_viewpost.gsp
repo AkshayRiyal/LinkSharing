@@ -25,7 +25,7 @@
 
 
                     <div class="col-sm-2">
-                        <h6>${resource.dateCreated}</h6>
+                        <h6>${resource.dateCreated.format('dd-MM-YYYY HH:mm')}</h6>
                     </div>
 
                 </div>

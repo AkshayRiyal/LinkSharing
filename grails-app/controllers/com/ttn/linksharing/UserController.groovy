@@ -5,6 +5,8 @@ import grails.converters.JSON
 import org.hibernate.criterion.Projection
 
 class UserController {
+    static defaultAction = "dashboard"
+    
     
     def dashboard(SearchCO co) {
         
@@ -63,8 +65,41 @@ class UserController {
         Resource.findByCreatedBy(user)
         List<User> userList = []
         userList.add(user)
-        render(view:'profile',model: [userList: userList,topics:user.topics,resourcesCreated: Resource.findAllByCreatedBy(user)])
-   
+        render(view: 'profile', model: [userList: userList, topics: user.topics, resourcesCreated: Resource.findAllByCreatedBy(user)])
+        
     }
     
+    def adminPanel() {
+        User user = User.findByUserName(session.user)
+        if (user.admin) {
+            List<User> userList = User.all
+            render(view: 'admin', model: [userList: userList])
+        } else {
+            redirect(controller: "user", action: "dashboard")
+        }
+    }
+    
+    def activate(int userId, int status) {
+        
+        User user = User.get(userId)
+        println(userId+"------"+status)
+        if (user) {
+            if (status) {
+                user.active = true
+            } else {
+                user.active = false
+            }
+            if (user.save(flush: true)) {
+                flash.message = "User Status Updated"
+            } else {
+                flash.error = "Updation Failed"
+            }
+        } else {
+            flash.error = "User Not Found"
+        }
+        redirect(controller: "user", action: "adminPanel")
+    }
+    
+    
 }
+    

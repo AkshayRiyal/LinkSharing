@@ -7,7 +7,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Send Invitation</h4>
             </div>
-            <g:form class="form-horizontal" controller="topic" action="topicSave">
+            <g:form class="form-horizontal" controller="topic" action="sendInvitation">
 
                 <div class="modal-body">
 
@@ -36,7 +36,7 @@
 
 
                 <div class="modal-footer">
-                    <g:submitButton type="submit" class="btn btn-default" name="save">Save</g:submitButton>
+                    <g:submitButton type="submit" class="btn btn-default" name="send" />
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 </div>
             </g:form>

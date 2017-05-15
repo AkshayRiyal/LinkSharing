@@ -1,4 +1,4 @@
-<%@ page import="com.ttn.linksharing.User" %>
+<%@ page import="java.text.SimpleDateFormat; com.ttn.linksharing.User" %>
 
 <div class="panel-body">
 
@@ -26,7 +26,7 @@
 
 
                         <div class="col-sm-2">
-                            <h6>${msg.dateCreated}</h6>
+                            <h6>${msg.dateCreated.format('dd-MM-YYYY HH:mm')}</h6>
                         </div>
 
                     </div>
@@ -64,7 +64,7 @@
                         </div>
 
 
-                        <div class="container-fluid col-md-9 pull-right">
+                        <div class="container-fluid col-md- pull-right">
 
 
 
@@ -92,7 +92,7 @@
                                     </g:if>
                                 </div>
 
-                                <div class="col-sm-3">
+                                <div class="col-sm-2">
                                     <ls:isResourceRead resourceId="$msg.id"/>
                                     %{--<a href="/topic/updateRead/${msg.id}"><p class="post-option">Mark-Read</p></a>--}%
                                 </div>

@@ -20,19 +20,20 @@ class LoginController {
     }
     
     def loginHandler(String username, String password) {
-        
         User user = User.findByUserNameAndPassword(username, password)
-        println(user)
         if (user) {
-            /*   if (user.isActive()) {*/
-            session.user = username
-            redirect(controller: "User", action: "dashboard")
-            /*
-             } else {
-                 flash.loginError = 'Your account is not active'
-                 redirect(controller: "Login")
-                 
-             }*/
+            if (user.admin) {
+                session.user = username
+                redirect(controller: "User", action: "adminPanel")
+                
+            } else if (user.isActive()) {
+                session.user = username
+                redirect(controller: "User", action: "dashboard")
+            } else {
+                flash.error = 'Your account is not active'
+                redirect(controller: "Login")
+                
+            }
         } else {
             flash.loginError = 'User not found'
             redirect(controller: "Login")
@@ -45,14 +46,18 @@ class LoginController {
     }
     
     def register(UserCo userCo) {
-        User user = new User()
-        bindData(user, userCo)
-        user.save(flush: true)
-        if (user.password != user.confirmPassword) {
+        
+        if (userCo.password != userCo.confirmPassword) {
+            
             flash.signupError = ["Passwords Doesn't Match"]
             redirect(controller: "Login")
             
         } else {
+            User user = new User()
+            bindData(user, userCo)
+            user.admin = false
+            user.active = false
+            user.save(flush: true)
             if (user.hasErrors()) {
                 flash.signupError = user.errors.allErrors.collect { message(error: it) }
             } else {

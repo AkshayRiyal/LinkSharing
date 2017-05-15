@@ -8,9 +8,9 @@ class User {
     String email;
     String userName
     String password;
-    boolean active;
+    boolean active=false;
     byte[] photo;
-    boolean admin
+    boolean admin=false
     Date dateCreated
     Date lastUpdated
     static transients = ['fullName']

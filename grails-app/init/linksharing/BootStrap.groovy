@@ -1,4 +1,3 @@
-/*
 package linksharing
 
 import com.ttn.linksharing.DocumentResource
@@ -17,15 +16,20 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.ApplicationContext
 
 class BootStrap {
-    */
-/*@Autowired
+@Autowired
     GrailsApplication grailsApplication
-    *//*
+    
 
     def init = { servletContext ->
- */
-/*grailsApplication.config.getProperty()
-*//*
+    
+        User user1 = new User(firstName: "Akshay", lastName: "Riyal", userName: "admin", email: "admim@gmail.com", password: Constant.password, confirmPassword: Constant.password,
+                active: true, admin: true)
+
+        user1.save(flush:true)
+        if (user1.hasErrors())
+            log.error("User cannot Be created.")
+
+/*
 
         try {
             createUser()
@@ -39,6 +43,7 @@ class BootStrap {
         catch (Exception e) {
             println(e)
         }
+*/
     }
     def destroy = {
     }
@@ -162,4 +167,3 @@ class BootStrap {
         }
     }
 }
-*/

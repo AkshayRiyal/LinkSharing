@@ -8,49 +8,59 @@ import org.springframework.context.MessageSource
 
 class TopicController {
     TopicService topicService
-  def show (ResourceSearchCO co){
-      Topic topic=Topic.read(co.topicId)
-      if(topic)
-        {
-         if(topic.visibility==Visibility.PUBLIC)
-         {
-             println(topic)
+    def sendInvitationService
     
-             render (view: "/topic/show",model:[topic:topic] )
-         
-         }
+    def show(ResourceSearchCO co) {
+        Topic topic = Topic.read(co.topicId)
+        if (topic) {
+            if (topic.visibility == Visibility.PUBLIC) {
+                println(topic)
+                
+                render(view: "/topic/show", model: [topic: topic])
+                
+            }
         }
-           
+        
     }
     
-    def save(String name,String visibility)
-    {
-        Topic topic=new Topic(name: name,visibility: Visibility.stringToEnum(visibility),createdBy: User.findAllByUserName(session.user))
-        topic.save(flush:true)
-        if(!topic.hasErrors()) {
-      
+    def save(String name, String visibility) {
+        Topic topic = new Topic(name: name, visibility: Visibility.stringToEnum(visibility), createdBy: User.findAllByUserName(session.user))
+        topic.save(flush: true)
+        if (!topic.hasErrors()) {
+            
             flash.message = "Topic successfully created. "
-        }
-        else {
+        } else {
             //log.error(topic.errors.allErrors)
-            flash.error="Topic cannot be created."
+            flash.error = "Topic cannot be created."
             
         }
-       redirect(controller: 'user',action: 'dashboard')
-      }
-    def delete(int topicId)
-    {
+        redirect(controller: 'user', action: 'dashboard')
+    }
+    
+    def delete(int topicId) {
         try {
             Topic topic = Topic.get(topicId)
-            println ("---------id===${topicId}----------------topic===${topic}")
+            println("---------id===${topicId}----------------topic===${topic}")
             topic.delete(flush: true)
-                flash.message="Topic ${topic.name} deleted."
-            }
-        catch (ObjectNotFoundException e)
-        {
-           flash.error="Topic DoesNot Exist."
+            flash.message = "Topic ${topic.name} deleted."
         }
-        redirect(controller: 'user',action: 'dashboard')
+        catch (ObjectNotFoundException e) {
+            flash.error = "Topic DoesNot Exist."
+        }
+        redirect(controller: 'user', action: 'dashboard')
     }
-   
+    
+    def sendInvitation(int topicId, String email) {
+        if (topicId && email) {
+            
+            Topic topic=Topic.get(topicId)
+            sendInvitationService.sendInvitation(topic,User.findByUserName(session.user),email)
+            flash.message = "Invitation will be sent shortly."
+            redirect(controller: 'user', action: 'dashboard')
+        } else {
+            flash.error = "Please Enter all Details"
+            redirect(controller: 'user', action: 'dashboard')
+        }
+    }
+    
 }
