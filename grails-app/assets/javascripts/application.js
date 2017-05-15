@@ -10,18 +10,21 @@
 //= require_tree .
 //= require_self
 //= require indexjs
-function insertRating(rId, score) {
+function insertRating(rId,score) {
     $.ajax({
-        url: "/resourceRating/rate?resourceId=" + rId + "&score=" + score,
+        url: "/resourceRating/rate?resourceId="+rId+"&score="+score,
         type: 'GET',
         success: function (resp) {
-            $("#rateStatus").html("Ratings Update")
+            $(".jsonSuccess").html("Ratings Update")
+            $('.jsonSuccess').addClass('alert alert-success alert-dismissible alert-success-custom');
         },
-        error: function (e) {
-            $("#rateStatus").html("Ratings failed")
+        error: function(e) {
+            $(".jsonError").html("Ratings failed")
+            $('.jsonError').addClass('alert alert-danger alert-dismissible alert-success-custom');
         }
     });
 }
+
 if (typeof jQuery !== 'undefined') {
     (function ($) {
         $(document).ajaxStart(function () {

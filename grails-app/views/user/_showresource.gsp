@@ -103,11 +103,31 @@
                             </div>
                         </div>
                     </div>
+       <div class="row">
+           <div class="col-sm-3">
+               <ls:isSubscribed resourceId="${msg.id}">
+
+                   <div class="dropdown">
+                       <button class="btn btn-default dropdown-toggle" type="button"
+                               data-toggle="dropdown">Rate
+                           <span class="caret"></span></button>
+                       <ul class="dropdown-menu">
+                           <li><a href="#" onclick="insertRating(${msg.id}, 1)">1</a></li>
+                           <li><a href="#" onclick="insertRating(${msg.id}, 2)">2</a></li>
+                           <li><a href="#" onclick="insertRating(${msg.id}, 3)">3</a></li>
+                           <li><a href="#" onclick="insertRating(${msg.id}, 4)">4</a></li>
+                           <li><a href="#" onclick="insertRating(${msg.id}, 5)">5</a></li>
+                       </ul>
+                   </div>
+               </ls:isSubscribed>
+           </div>
+           <div class="col-sm-9">
+               <p id="rateStatus"></p>
+           </div>
+       </div>
    </div>
 
                 </g:each>
             </g:if>
         </div>
 
-    </div>
-</div>

@@ -152,6 +152,18 @@ class ApplicationTagLib {
         
         
     }
+    def isSubscribed={attr,body->
+        User user = User.findByUserName(session.user)
+        Resource resource= Resource.get(attr.resourceId)
+        if(user&&resource&&Subscription.countByTopicAndUser(resource.topic,user))
+        {
+            out<<body()
+        }
+        else
+        {
+            out<<""
+        }
+    }
     
 }
     

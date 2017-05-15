@@ -88,6 +88,12 @@
         <strong>${flash.message}</strong>
     </div>
 </g:if>
+    <div class="jsonError">
+
+    </div>
+
+    <div class="jsonSuccess">
+    </div>
 <g:layoutBody/>
 
 <div class="footer" role="contentinfo"></div>
