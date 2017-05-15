@@ -12,7 +12,7 @@
                         </div>
 
                         <div class="col-sm-3">
-                            <h5>${msg.createdBy.fullName}</h5>
+                            <a href="/user/profile?userId=${msg.createdBy.id}"><h5>${msg.createdBy.fullName}</h5></a>
 
                         </div>
 

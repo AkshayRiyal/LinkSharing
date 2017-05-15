@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52375b6f-f459-4c0d-9a72-66f332e476b7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/UserController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/UserController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/taglib/com/ttn/linksharing/ApplicationTagLib.groovy" afterPath="$PROJECT_DIR$/grails-app/taglib/com/ttn/linksharing/ApplicationTagLib.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/topic/_displaytopic.gsp" afterPath="$PROJECT_DIR$/grails-app/views/topic/_displaytopic.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/user/_show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/user/_show.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/user/_showresource.gsp" afterPath="$PROJECT_DIR$/grails-app/views/user/_showresource.gsp" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -80,8 +81,8 @@
       <file leaf-file-name="_displaytopic.gsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/topic/_displaytopic.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -90,8 +91,18 @@
       <file leaf-file-name="_showresource.gsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/user/_showresource.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="115" column="63" lean-forward="false" selection-start-line="115" selection-start-column="63" selection-end-line="115" selection-end-column="63" />
+            <state relative-caret-position="210">
+              <caret line="14" column="117" lean-forward="false" selection-start-line="14" selection-start-column="117" selection-end-line="14" selection-end-column="117" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_show.gsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/user/_show.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="95" lean-forward="false" selection-start-line="14" selection-start-column="95" selection-end-line="14" selection-end-column="95" />
               <folding />
             </state>
           </provider>
@@ -130,11 +141,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApplicationTagLib.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ApplicationTagLib.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/taglib/com/ttn/linksharing/ApplicationTagLib.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="171" column="5" lean-forward="false" selection-start-line="171" selection-start-column="5" selection-end-line="171" selection-end-column="5" />
+            <state relative-caret-position="221">
+              <caret line="162" column="9" lean-forward="true" selection-start-line="162" selection-start-column="9" selection-end-line="162" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -932,12 +943,10 @@
         <option value="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/DocumentResourceController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/topic/_topshare.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/topic/_recentshare.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/topic/_displaytopic.gsp" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/grails-app/conf/application.yml" />
         <option value="$PROJECT_DIR$/grails-app/services/com/ttn/linksharing/SendInvitationService.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/user/dashboard.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/user/_show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/resource/_viewpost.gsp" />
         <option value="$PROJECT_DIR$/grails-app/init/linksharing/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/ttn/linksharing/User.groovy" />
@@ -950,12 +959,14 @@
         <option value="$PROJECT_DIR$/grails-app/services/com/ttn/linksharing/SendMailService.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/login/_loginform.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/login/forgotpassword.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/user/_showresource.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/ResourceRatingController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/UserController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
         <option value="$PROJECT_DIR$/grails-app/taglib/com/ttn/linksharing/ApplicationTagLib.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/topic/_displaytopic.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/user/_showresource.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/user/_show.gsp" />
       </list>
     </option>
   </component>
@@ -1119,7 +1130,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ServiceDemoApp/build.gradle" />
-    <property name="SearchEverywhereHistoryKey" value="appli&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/taglib/com/ttn/linksharing/ApplicationTagLib.groovy&#10;main&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/layouts/main.gsp&#10;profil&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/user/profile.gsp&#10;Res&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/controllers/com/ttn/linksharing/ResourceRatingController.groovy&#10;appl&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/taglib/com/ttn/linksharing/ApplicationTagLib.groovy&#10;_show&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/user/_showresource.gsp&#10;_lo&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/login/_loginform.gsp&#10;crea&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/linkresource/_create.gsp&#10;das&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/user/dashboard.gsp&#10;inbo&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/user/_inbox.gsp&#10;Bootst&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="_show&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/user/_show.gsp&#10;_dis&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/topic/_displaytopic.gsp&#10;appli&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/taglib/com/ttn/linksharing/ApplicationTagLib.groovy&#10;main&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/layouts/main.gsp&#10;profil&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/user/profile.gsp&#10;Res&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/controllers/com/ttn/linksharing/ResourceRatingController.groovy&#10;appl&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/taglib/com/ttn/linksharing/ApplicationTagLib.groovy&#10;_lo&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/login/_loginform.gsp&#10;crea&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/linkresource/_create.gsp&#10;das&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/user/dashboard.gsp&#10;inbo&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/user/_inbox.gsp&#10;Bootst&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -1699,7 +1710,7 @@
       <workItem from="1494644105316" duration="38426000" />
       <workItem from="1494731258680" duration="478000" />
       <workItem from="1494731927048" duration="28655000" />
-      <workItem from="1494855985005" duration="5349000" />
+      <workItem from="1494855985005" duration="5706000" />
     </task>
     <servers />
   </component>
@@ -1736,7 +1747,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="433658000" />
+    <option name="totallyTimeSpent" value="434015000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2332,13 +2343,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/user/_show.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/user/dashboard.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -2494,14 +2498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/user/_showresource.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="115" column="63" lean-forward="false" selection-start-line="115" selection-start-column="63" selection-end-line="115" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -2517,14 +2513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="69" column="18" lean-forward="true" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/topic/_displaytopic.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2555,8 +2543,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/taglib/com/ttn/linksharing/ApplicationTagLib.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="171" column="5" lean-forward="false" selection-start-line="171" selection-start-column="5" selection-end-line="171" selection-end-column="5" />
+        <state relative-caret-position="221">
+          <caret line="162" column="9" lean-forward="true" selection-start-line="162" selection-start-column="9" selection-end-line="162" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/topic/_displaytopic.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/user/_showresource.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="117" lean-forward="false" selection-start-line="14" selection-start-column="117" selection-end-line="14" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/user/_show.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="95" lean-forward="false" selection-start-line="14" selection-start-column="95" selection-end-line="14" selection-end-column="95" />
           <folding />
         </state>
       </provider>

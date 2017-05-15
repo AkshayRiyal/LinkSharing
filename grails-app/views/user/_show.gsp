@@ -12,7 +12,7 @@
             <div class="col-sm-9">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4>${user.fullName}</h4>
+                        <a href="/user/profile?userId=${user.id}"><h4>${user.fullName}</h4></a>
 
                     </div>
                 </div>
