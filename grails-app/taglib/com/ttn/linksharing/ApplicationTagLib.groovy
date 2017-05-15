@@ -164,6 +164,12 @@ class ApplicationTagLib {
             out<<""
         }
     }
+    def displayProfileOnNavbar = { attr ->
+        User user = User.findByUserName(session.user)
+        
+        String url = createLink(controller: 'user', action: 'profile', params: [userId: user.id])
+        out << "<a href='${url}'>Profile</a>"
+    }
     
 }
     

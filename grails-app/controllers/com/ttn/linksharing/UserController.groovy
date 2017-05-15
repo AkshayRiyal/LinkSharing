@@ -60,13 +60,15 @@ class UserController {
         
     }
     
-    def profile() {
-        User user = User.findByUserName(session.user)
-        Resource.findByCreatedBy(user)
-        List<User> userList = []
-        userList.add(user)
-        render(view: 'profile', model: [userList: userList, topics: user.topics, resourcesCreated: Resource.findAllByCreatedBy(user)])
+    def profile(int userId) {
         
+        User user = User.get(userId)
+        if(user) {
+            Resource.findByCreatedBy(user)
+            List<User> userList = []
+            userList.add(user)
+            render(view: 'profile', model: [userList: userList, topics: user.topics, resourcesCreated: Resource.findAllByCreatedBy(user)])
+        }
     }
     
     def adminPanel() {
