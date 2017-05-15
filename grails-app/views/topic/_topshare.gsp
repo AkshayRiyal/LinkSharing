@@ -1,24 +1,24 @@
 <%@ page import="com.ttn.linksharing.vo.ResourceVO;" %>
 <!--TOp SHare-->
 
-<div class="container-fluid col-md-7 col-sm-12 col-xs-12 pull-left my-panel">
+<div class="container-fluid col-md-12 col-sm-12 col-xs-12 pull-left my-panel">
     <div class="panel panel-default">
         <div class="panel-heading">
             <span class="panel-title">Top Shares</span>
 
-      %{--      <div class="btn-group pull-right" style="margin-top:-1px;">
-                <button class="btn btn-xs"
-                        style="background-color: transparent;border:1px solid #5bc0de ">Today</button>
-                <button class="btn btn-xs dropdown-toggle" data-toggle="dropdown">
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a href="#">Week</a></li>
-                    <li><a href="#">Month</a></li>
-                    <li><a href="#">Year</a></li>
-                </ul>
-            </div>
-      --}%  </div>
+            %{--      <div class="btn-group pull-right" style="margin-top:-1px;">
+                      <button class="btn btn-xs"
+                              style="background-color: transparent;border:1px solid #5bc0de ">Today</button>
+                      <button class="btn btn-xs dropdown-toggle" data-toggle="dropdown">
+                          <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-right">
+                          <li><a href="#">Week</a></li>
+                          <li><a href="#">Month</a></li>
+                          <li><a href="#">Year</a></li>
+                      </ul>
+                  </div>
+            --}%</div>
 
         <div class="panel-body">
         <!--FOr User Image,topic ,rating-->

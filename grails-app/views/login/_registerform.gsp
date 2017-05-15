@@ -1,5 +1,5 @@
 <!--Registeration Form -->
-<div class="container-fluid col-md-4 col-sm-12 col-xs-12 pull-right my-panel">
+<div class="container-fluid col-sm-12 col-xs-12 pull-right my-panel">
     <div class="signup-validation-msg">
         <g:if test="${flash.signupError}">
             <div class="alert alert-danger">
@@ -22,7 +22,7 @@
         </div>
 
         <div class="panel-body">
-            <form class="form-signup" action="/login/register" method="post" onsubmit="return validateLogin()">
+            <g:uploadForm class="form-signup"  controller="login" action="register" method="post" onsubmit="return validateLogin()">
                 <input type="text" name="firstName" pattern="[A-Za-z]{1,20}" title="Alphabets only." maxlength="20"
                        class="form-control" placeholder="First Name" required/>
                 <input type="text" name="lastName" pattern="[A-Za-z]{1,20}" title="Alphabets only." class="form-control"
@@ -36,7 +36,7 @@
                 <input type="password" name="confirmPassword" id="confirmPassword" pattern=".{5,15}" title="range 5-15" class="form-control" placeholder="Confirm Password"
                        required style="margin-top: 10px"/>
                 <label class="btn btn-block  btn-default btn-file" style="margin-top: 10px;color:slategray">
-                    Choose Profile Photo <input type="file" hidden>
+                    Choose Profile Photo <input type="file" name="image" hidden>
                 </label>
 
                 <div class="checkbox">
@@ -44,7 +44,7 @@
                 </div>
 
 
-            </form>
+            </g:uploadForm>
         </div>
     </div>
 </div>

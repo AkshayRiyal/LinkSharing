@@ -8,9 +8,9 @@ class User {
     String email;
     String userName
     String password;
-    boolean active=false;
-    byte[] photo;
-    boolean admin=false
+    boolean active = false;
+    Byte[] photo;
+    boolean admin = false
     Date dateCreated
     Date lastUpdated
     static transients = ['fullName']
@@ -37,7 +37,7 @@ class User {
         
         firstName(blank: false, nullable: false)
         lastName(blank: false, nullable: false)
-        photo(nullable: true)
+        photo(nullable: true, blank: true)
         admin(nullable: true)
         active(nullable: true)
         dateCreated(nullable: true)
@@ -49,14 +49,15 @@ class User {
     }
     static mapping = {
         sort id: "desc" // or "asc"
+        photo(sqlType: 'longBlob')
     }
-    static List<Topic> getSubscribedTopics(User user)
-    {
-        List<Topic> topicList=Subscription.createCriteria().list {
-            projections{
+    
+    static List<Topic> getSubscribedTopics(User user) {
+        List<Topic> topicList = Subscription.createCriteria().list {
+            projections {
                 property('topic')
             }
-            eq('user',user)
+            eq('user', user)
         }
         return topicList
     }
@@ -70,7 +71,7 @@ class User {
                             {
                                 property('resource')
                             }
-                
+                    
                 }
                 
                 readingItems {

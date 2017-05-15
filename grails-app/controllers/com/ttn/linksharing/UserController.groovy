@@ -71,10 +71,13 @@ class UserController {
         }
     }
     
-    def adminPanel() {
+    def adminPanel(Integer offset,int max) {
+        if(!offset)
+            offset=0
+        
         User user = User.findByUserName(session.user)
         if (user.admin) {
-            List<User> userList = User.all
+            List<User> userList = User.createCriteria().list(offset:offset,max:5){eq("admin",false)}
             render(view: 'admin', model: [userList: userList])
         } else {
             redirect(controller: "user", action: "dashboard")

@@ -1,3 +1,4 @@
+<%@ page import="com.ttn.linksharing.User" %>
 <div class="container-fluid col-sm-12">
     <div class="row">
         <div class="col-sm-12">
@@ -39,6 +40,8 @@
                 </g:each>
 
             </table>
+            <g:paginate max="5" total="${com.ttn.linksharing.User.count()}"/>
+
         </div>
 
     </div>

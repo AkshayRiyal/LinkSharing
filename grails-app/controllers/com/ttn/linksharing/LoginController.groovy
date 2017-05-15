@@ -57,6 +57,10 @@ class LoginController {
             bindData(user, userCo)
             user.admin = false
             user.active = false
+            def file = request.getFile('image')
+            if(file){
+                user.photo = file.getBytes()
+            }
             user.save(flush: true)
             if (user.hasErrors()) {
                 flash.signupError = user.errors.allErrors.collect { message(error: it) }
