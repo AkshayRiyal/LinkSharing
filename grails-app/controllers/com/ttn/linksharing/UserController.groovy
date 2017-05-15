@@ -6,7 +6,7 @@ import org.hibernate.criterion.Projection
 
 class UserController {
     static defaultAction = "dashboard"
-    
+    def assetResourceLocator
     
     def dashboard(SearchCO co) {
         
@@ -103,6 +103,19 @@ class UserController {
             flash.error = "User Not Found"
         }
         redirect(controller: "user", action: "adminPanel")
+    }
+    def image(Long userId) {
+        User user = User.load(userId)
+        byte[] photo
+        if (user?.photo == null) {
+            photo = assetResourceLocator.findAssetForURI('user_img_default.png').byteArray
+        } else {
+            photo = user.photo
+        }
+        OutputStream out = response.getOutputStream()
+        out.write(photo)
+        out.flush()
+        out.close()
     }
     
     

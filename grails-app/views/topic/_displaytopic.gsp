@@ -43,6 +43,15 @@
                 </div>
 
             </div>
+            <div class="row">
+               <div class="col-sm-9 pull-right " id="topicTextBox" style="display: none" >
+                   <g:form controller="topic" action="update">
+                       <input type="text" value="${topic.name}" name="${topic.id}"/>
+                       <input type="submit" value="Update" />
+                   </g:form>
+
+               </div>
+            </div>
             <ls:canEdit topic="${topic}"/>
         </div>
 

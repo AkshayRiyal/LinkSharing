@@ -6,7 +6,7 @@
 
         <div class="row well">
             <div class="col-sm-3">
-                <asset:image src="user_img_default.png" class="user_img"/>
+               <ls:userImage userId="${user.id}"/>
             </div>
 
             <div class="col-sm-9">

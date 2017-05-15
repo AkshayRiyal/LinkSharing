@@ -170,6 +170,11 @@ class ApplicationTagLib {
         String url = createLink(controller: 'user', action: 'profile', params: [userId: user.id])
         out << "<a href='${url}'>Profile</a>"
     }
+    def userImage = { attrs, body ->
+        User user = User.get(attrs.userId)
+        out << "<img class=\"user_img media-object recent-media-object-custom\" " +
+                "src=\"${createLink(controller: 'user', action: 'image', params: [userId: attrs.userId])}\">"
+    }
     
 }
     
