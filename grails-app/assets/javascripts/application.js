@@ -10,11 +10,23 @@
 //= require_tree .
 //= require_self
 //= require indexjs
+function insertRating(rId, score) {
+    $.ajax({
+        url: "/resourceRating/rate?resourceId=" + rId + "&score=" + score,
+        type: 'GET',
+        success: function (resp) {
+            $("#rateStatus").html("Ratings Update")
+        },
+        error: function (e) {
+            $("#rateStatus").html("Ratings failed")
+        }
+    });
+}
 if (typeof jQuery !== 'undefined') {
-    (function($) {
-        $(document).ajaxStart(function() {
+    (function ($) {
+        $(document).ajaxStart(function () {
             $('#spinner').fadeIn();
-        }).ajaxStop(function() {
+        }).ajaxStop(function () {
             $('#spinner').fadeOut();
         });
     })(jQuery);

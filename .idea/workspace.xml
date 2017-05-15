@@ -2,43 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52375b6f-f459-4c0d-9a72-66f332e476b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/user/_userInfo.gsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/user/admin.gsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/login/forgotpassword.gsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/grails-app/services/com/ttn/linksharing/SendInvitationService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/com/ttn/linksharing/SendMailService.groovy" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/groovy/com/ttn/linksharing/SendInvitationServiceSpec.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/com/ttn/linksharing/SendMailServiceSpec.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/ApplicationInterceptor.class" afterPath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/ApplicationInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/DocumentResource.class" afterPath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/DocumentResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/LinkResource.class" afterPath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/LinkResource.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/LoginCheckInterceptor.class" afterPath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/LoginCheckInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/LoginController$_register_closure1.class" afterPath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/LoginController$_register_closure1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/LoginController.class" afterPath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/ReadingItem.class" afterPath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/ReadingItem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/Resource.class" afterPath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/Resource.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/ResourceController.class" afterPath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/ResourceController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/ResourceRating.class" afterPath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/ResourceRating.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/Subscription.class" afterPath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/Subscription.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/SubscriptionController.class" afterPath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/SubscriptionController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/Topic.class" afterPath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/Topic.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/TopicController.class" afterPath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/TopicController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/User.class" afterPath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/User.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/UserController.class" afterPath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/UserController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/UtilController.class" afterPath="$PROJECT_DIR$/build/classes/main/com/ttn/linksharing/UtilController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/stacktrace.log" afterPath="$PROJECT_DIR$/build/stacktrace.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/application.yml" afterPath="$PROJECT_DIR$/grails-app/conf/application.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/grails-app/assets/javascripts/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/LoginCheckInterceptor.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/LoginCheckInterceptor.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/LoginController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/LoginController.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/TopicController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/TopicController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/UserController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/UserController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/com/ttn/linksharing/User.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/com/ttn/linksharing/User.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/init/linksharing/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/init/linksharing/BootStrap.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/resource/_viewpost.gsp" afterPath="$PROJECT_DIR$/grails-app/views/resource/_viewpost.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/topic/_email.gsp" afterPath="$PROJECT_DIR$/grails-app/views/topic/_email.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/user/_show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/user/_show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/user/_showresource.gsp" afterPath="$PROJECT_DIR$/grails-app/views/user/_showresource.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/user/dashboard.gsp" afterPath="$PROJECT_DIR$/grails-app/views/user/dashboard.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/login/_loginform.gsp" afterPath="$PROJECT_DIR$/grails-app/views/login/_loginform.gsp" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -91,7 +75,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/UserController.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -101,11 +85,83 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/user/admin.gsp">
+      <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            <state relative-caret-position="390">
+              <caret line="26" column="43" lean-forward="false" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginCheckInterceptorSpec.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/groovy/com/ttn/linksharing/LoginCheckInterceptorSpec.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginCheckInterceptor.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/LoginCheckInterceptor.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="74" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/LoginController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="74" column="26" lean-forward="false" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forgotpassword.gsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/login/forgotpassword.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TopicController.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/TopicController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_loginform.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/login/_loginform.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="75" lean-forward="false" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SendMailService.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/services/com/ttn/linksharing/SendMailService.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="86">
+              <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -114,11 +170,9 @@
       <file leaf-file-name="_userInfo.gsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/user/_userInfo.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="31" column="56" lean-forward="true" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
-              <folding>
-                <marker date="1494783662081" expanded="true" signature="577:1656" ph="..." />
-              </folding>
+            <state relative-caret-position="465">
+              <caret line="31" column="56" lean-forward="false" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -888,11 +942,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/UrlMappings.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/ttn/linksharing/vo/ResourceVO.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/ttn/linksharing/co/UserCo.groovy" />
         <option value="$PROJECT_DIR$/grails-app/i18n/messages.properties" />
-        <option value="$PROJECT_DIR$/grails-app/views/login/_loginform.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/ApplicationInterceptor.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/LinkResourceController.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/com/ttn/linksharing/vo/TopicVO.groovy" />
@@ -924,9 +974,7 @@
         <option value="$PROJECT_DIR$/grails-app/views/topic/_recentshare.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/topic/_displaytopic.gsp" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/LoginCheckInterceptor.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/application.yml" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/TopicController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/services/com/ttn/linksharing/SendInvitationService.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/user/dashboard.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/user/_show.gsp" />
@@ -934,11 +982,17 @@
         <option value="$PROJECT_DIR$/grails-app/views/resource/_viewpost.gsp" />
         <option value="$PROJECT_DIR$/grails-app/init/linksharing/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/com/ttn/linksharing/User.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/LoginController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/topic/_email.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/user/admin.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/user/_userInfo.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/UserController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/LoginCheckInterceptor.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/LoginController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/TopicController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/services/com/ttn/linksharing/SendMailService.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/login/_loginform.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/login/forgotpassword.gsp" />
       </list>
     </option>
   </component>
@@ -994,9 +1048,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1062,28 +1116,6 @@
               <option name="myItemId" value="grails-app" />
               <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linksharing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linksharing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grails-app" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -1102,7 +1134,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ServiceDemoApp/build.gradle" />
-    <property name="SearchEverywhereHistoryKey" value="main&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/layouts/main.gsp&#10;crea&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/linkresource/_create.gsp&#10;das&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/user/dashboard.gsp&#10;inbo&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/user/_inbox.gsp&#10;Bootst&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="_lo&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/login/_loginform.gsp&#10;main&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/layouts/main.gsp&#10;crea&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/linkresource/_create.gsp&#10;das&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/user/dashboard.gsp&#10;inbo&#9;FILE&#9;file:///home/akshay/3_projects/linksharing/grails-app/views/user/_inbox.gsp&#10;Bootst&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -1682,6 +1714,7 @@
       <workItem from="1494644105316" duration="38426000" />
       <workItem from="1494731258680" duration="478000" />
       <workItem from="1494731927048" duration="28655000" />
+      <workItem from="1494855985005" duration="1390000" />
     </task>
     <servers />
   </component>
@@ -1718,7 +1751,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="428309000" />
+    <option name="totallyTimeSpent" value="429699000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1731,7 +1764,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1740,7 +1773,6 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Grails Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1751,11 +1783,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47832817" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23993808" sideWeight="0.4749004" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24701196" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23993808" sideWeight="0.4749004" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25099602" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18565737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1765,6 +1797,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="combo" />
+      <window_info id="Grails Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1778,26 +1811,26 @@
             <StateHolder>
               <option name="knownFactories">
                 <list>
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/hibernate5/6.0.9/61755678567dd72f1d6f8dd7f9cba3f832ee2090/hibernate5-6.0.9.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-async/3.2.8/f6dfa7e21767d8f85045144653414c6f2835ef8e/grails-plugin-async-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-databinding/3.2.8/881b34891895e045e5e4a6126539e7ec8f1b7461/grails-web-databinding-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-taglib/3.2.8/9e6883602bf8080746ca37b831c160c61eeff86e/grails-web-taglib-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-url-mappings/3.2.8/9557090de58324274c858a23bae526c5a1f60dca/grails-web-url-mappings-3.2.8.jar!/META-INF/services/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-core/3.2.8/190146aad60c4ea86cca4d8831f0cccf6512dad3/grails-core-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/cache/3.0.3/e857268f939b4b907ce91ff4f5217cfb97abcaa7/cache-3.0.3.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-interceptors/3.2.8/848a6cb064154dfcc076fdba02fdc722396d2c17/grails-plugin-interceptors-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-services/3.2.8/b6d2b6ff49583da305df61c8f2534fa42e810bc9/grails-plugin-services-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-codecs/3.2.8/f87800895a347f7aedfa3b5f31573b8d85c43ee2/grails-plugin-codecs-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-controllers/3.2.8/a21cdf724f544a8c2880788ae6f7eb6735b8d7be/grails-plugin-controllers-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-gsp/3.2.8/382026008c52e89bc1c73e60e7e9dfcf667bce8/grails-plugin-gsp-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-domain-class/3.2.8/9840db0f11bf1edc1003fa7fe56dff9cb32c78e/grails-plugin-domain-class-3.2.8.jar!/META-INF/grails.factories" />
                   <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/mail/2.0.0.RC6/d410eb8cda394dcf894291db5c0e7f94e600c21e/mail-2.0.0.RC6.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web/3.2.8/13c4ecb88bcac1cff657a9fe490b8bb98839d429/grails-web-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-testing/3.2.8/e9e700b0f37f902d930cde33f89726469c4d3a6a/grails-plugin-testing-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-datastore-gorm-support/6.0.9.RELEASE/8250e3b6f4691637ffd8e4958f4b06b25a2f0aaa/grails-datastore-gorm-support-6.0.9.RELEASE.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-url-mappings/3.2.8/9557090de58324274c858a23bae526c5a1f60dca/grails-web-url-mappings-3.2.8.jar!/META-INF/grails.factories" />
                   <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-rest/3.2.8/42579e85c1bdf6084c1a303bb8ca9e3cbb0ba7f8/grails-plugin-rest-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-controllers/3.2.8/a21cdf724f544a8c2880788ae6f7eb6735b8d7be/grails-plugin-controllers-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-core/3.2.8/190146aad60c4ea86cca4d8831f0cccf6512dad3/grails-core-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-gsp/3.2.8/382026008c52e89bc1c73e60e7e9dfcf667bce8/grails-plugin-gsp-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-testing/3.2.8/e9e700b0f37f902d930cde33f89726469c4d3a6a/grails-plugin-testing-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web/3.2.8/13c4ecb88bcac1cff657a9fe490b8bb98839d429/grails-web-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-domain-class/3.2.8/9840db0f11bf1edc1003fa7fe56dff9cb32c78e/grails-plugin-domain-class-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-services/3.2.8/b6d2b6ff49583da305df61c8f2534fa42e810bc9/grails-plugin-services-3.2.8.jar!/META-INF/grails.factories" />
                   <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-validation/3.2.8/176bdf11c9c75ffc193e18c0054de3e31cd0b952/grails-validation-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-taglib/3.2.8/9e6883602bf8080746ca37b831c160c61eeff86e/grails-web-taglib-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-interceptors/3.2.8/848a6cb064154dfcc076fdba02fdc722396d2c17/grails-plugin-interceptors-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-async/3.2.8/f6dfa7e21767d8f85045144653414c6f2835ef8e/grails-plugin-async-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/cache/3.0.3/e857268f939b4b907ce91ff4f5217cfb97abcaa7/cache-3.0.3.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-databinding/3.2.8/881b34891895e045e5e4a6126539e7ec8f1b7461/grails-web-databinding-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-url-mappings/3.2.8/9557090de58324274c858a23bae526c5a1f60dca/grails-web-url-mappings-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/hibernate5/6.0.9/61755678567dd72f1d6f8dd7f9cba3f832ee2090/hibernate5-6.0.9.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-datastore-gorm-support/6.0.9.RELEASE/8250e3b6f4691637ffd8e4958f4b06b25a2f0aaa/grails-datastore-gorm-support-6.0.9.RELEASE.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-url-mappings/3.2.8/9557090de58324274c858a23bae526c5a1f60dca/grails-web-url-mappings-3.2.8.jar!/META-INF/services/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-codecs/3.2.8/f87800895a347f7aedfa3b5f31573b8d85c43ee2/grails-plugin-codecs-3.2.8.jar!/META-INF/grails.factories" />
                   <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-common/3.2.8/9d153dac3993beb96625fa0a2d2cefe77079335/grails-web-common-3.2.8.jar!/META-INF/grails.factories" />
                 </list>
               </option>
@@ -1866,25 +1899,25 @@
             <StateHolder>
               <option name="knownFactories">
                 <list>
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/hibernate5/6.0.9/61755678567dd72f1d6f8dd7f9cba3f832ee2090/hibernate5-6.0.9.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-async/3.2.8/f6dfa7e21767d8f85045144653414c6f2835ef8e/grails-plugin-async-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-databinding/3.2.8/881b34891895e045e5e4a6126539e7ec8f1b7461/grails-web-databinding-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-taglib/3.2.8/9e6883602bf8080746ca37b831c160c61eeff86e/grails-web-taglib-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-url-mappings/3.2.8/9557090de58324274c858a23bae526c5a1f60dca/grails-web-url-mappings-3.2.8.jar!/META-INF/services/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-core/3.2.8/190146aad60c4ea86cca4d8831f0cccf6512dad3/grails-core-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/cache/3.0.3/e857268f939b4b907ce91ff4f5217cfb97abcaa7/cache-3.0.3.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-interceptors/3.2.8/848a6cb064154dfcc076fdba02fdc722396d2c17/grails-plugin-interceptors-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-services/3.2.8/b6d2b6ff49583da305df61c8f2534fa42e810bc9/grails-plugin-services-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-codecs/3.2.8/f87800895a347f7aedfa3b5f31573b8d85c43ee2/grails-plugin-codecs-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-controllers/3.2.8/a21cdf724f544a8c2880788ae6f7eb6735b8d7be/grails-plugin-controllers-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-gsp/3.2.8/382026008c52e89bc1c73e60e7e9dfcf667bce8/grails-plugin-gsp-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-domain-class/3.2.8/9840db0f11bf1edc1003fa7fe56dff9cb32c78e/grails-plugin-domain-class-3.2.8.jar!/META-INF/grails.factories" />
                   <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/mail/2.0.0.RC6/d410eb8cda394dcf894291db5c0e7f94e600c21e/mail-2.0.0.RC6.jar!/META-INF/grails.factories" />
                   <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-rest/3.2.8/42579e85c1bdf6084c1a303bb8ca9e3cbb0ba7f8/grails-plugin-rest-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-datastore-gorm-support/6.0.9.RELEASE/8250e3b6f4691637ffd8e4958f4b06b25a2f0aaa/grails-datastore-gorm-support-6.0.9.RELEASE.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-url-mappings/3.2.8/9557090de58324274c858a23bae526c5a1f60dca/grails-web-url-mappings-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-controllers/3.2.8/a21cdf724f544a8c2880788ae6f7eb6735b8d7be/grails-plugin-controllers-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-core/3.2.8/190146aad60c4ea86cca4d8831f0cccf6512dad3/grails-core-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-gsp/3.2.8/382026008c52e89bc1c73e60e7e9dfcf667bce8/grails-plugin-gsp-3.2.8.jar!/META-INF/grails.factories" />
                   <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web/3.2.8/13c4ecb88bcac1cff657a9fe490b8bb98839d429/grails-web-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-domain-class/3.2.8/9840db0f11bf1edc1003fa7fe56dff9cb32c78e/grails-plugin-domain-class-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-services/3.2.8/b6d2b6ff49583da305df61c8f2534fa42e810bc9/grails-plugin-services-3.2.8.jar!/META-INF/grails.factories" />
                   <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-validation/3.2.8/176bdf11c9c75ffc193e18c0054de3e31cd0b952/grails-validation-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-taglib/3.2.8/9e6883602bf8080746ca37b831c160c61eeff86e/grails-web-taglib-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-interceptors/3.2.8/848a6cb064154dfcc076fdba02fdc722396d2c17/grails-plugin-interceptors-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-async/3.2.8/f6dfa7e21767d8f85045144653414c6f2835ef8e/grails-plugin-async-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/cache/3.0.3/e857268f939b4b907ce91ff4f5217cfb97abcaa7/cache-3.0.3.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-databinding/3.2.8/881b34891895e045e5e4a6126539e7ec8f1b7461/grails-web-databinding-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-url-mappings/3.2.8/9557090de58324274c858a23bae526c5a1f60dca/grails-web-url-mappings-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/hibernate5/6.0.9/61755678567dd72f1d6f8dd7f9cba3f832ee2090/hibernate5-6.0.9.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-datastore-gorm-support/6.0.9.RELEASE/8250e3b6f4691637ffd8e4958f4b06b25a2f0aaa/grails-datastore-gorm-support-6.0.9.RELEASE.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-url-mappings/3.2.8/9557090de58324274c858a23bae526c5a1f60dca/grails-web-url-mappings-3.2.8.jar!/META-INF/services/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-codecs/3.2.8/f87800895a347f7aedfa3b5f31573b8d85c43ee2/grails-plugin-codecs-3.2.8.jar!/META-INF/grails.factories" />
                   <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-common/3.2.8/9d153dac3993beb96625fa0a2d2cefe77079335/grails-web-common-3.2.8.jar!/META-INF/grails.factories" />
                 </list>
               </option>
@@ -1953,26 +1986,26 @@
             <StateHolder>
               <option name="knownFactories">
                 <list>
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/hibernate5/6.0.9/61755678567dd72f1d6f8dd7f9cba3f832ee2090/hibernate5-6.0.9.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-async/3.2.8/f6dfa7e21767d8f85045144653414c6f2835ef8e/grails-plugin-async-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-databinding/3.2.8/881b34891895e045e5e4a6126539e7ec8f1b7461/grails-web-databinding-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-taglib/3.2.8/9e6883602bf8080746ca37b831c160c61eeff86e/grails-web-taglib-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-url-mappings/3.2.8/9557090de58324274c858a23bae526c5a1f60dca/grails-web-url-mappings-3.2.8.jar!/META-INF/services/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-core/3.2.8/190146aad60c4ea86cca4d8831f0cccf6512dad3/grails-core-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/cache/3.0.3/e857268f939b4b907ce91ff4f5217cfb97abcaa7/cache-3.0.3.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-interceptors/3.2.8/848a6cb064154dfcc076fdba02fdc722396d2c17/grails-plugin-interceptors-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-services/3.2.8/b6d2b6ff49583da305df61c8f2534fa42e810bc9/grails-plugin-services-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-codecs/3.2.8/f87800895a347f7aedfa3b5f31573b8d85c43ee2/grails-plugin-codecs-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-controllers/3.2.8/a21cdf724f544a8c2880788ae6f7eb6735b8d7be/grails-plugin-controllers-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-gsp/3.2.8/382026008c52e89bc1c73e60e7e9dfcf667bce8/grails-plugin-gsp-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-domain-class/3.2.8/9840db0f11bf1edc1003fa7fe56dff9cb32c78e/grails-plugin-domain-class-3.2.8.jar!/META-INF/grails.factories" />
                   <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/mail/2.0.0.RC6/d410eb8cda394dcf894291db5c0e7f94e600c21e/mail-2.0.0.RC6.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web/3.2.8/13c4ecb88bcac1cff657a9fe490b8bb98839d429/grails-web-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-testing/3.2.8/e9e700b0f37f902d930cde33f89726469c4d3a6a/grails-plugin-testing-3.2.8.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-datastore-gorm-support/6.0.9.RELEASE/8250e3b6f4691637ffd8e4958f4b06b25a2f0aaa/grails-datastore-gorm-support-6.0.9.RELEASE.jar!/META-INF/grails.factories" />
-                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-url-mappings/3.2.8/9557090de58324274c858a23bae526c5a1f60dca/grails-web-url-mappings-3.2.8.jar!/META-INF/grails.factories" />
                   <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-rest/3.2.8/42579e85c1bdf6084c1a303bb8ca9e3cbb0ba7f8/grails-plugin-rest-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-controllers/3.2.8/a21cdf724f544a8c2880788ae6f7eb6735b8d7be/grails-plugin-controllers-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-core/3.2.8/190146aad60c4ea86cca4d8831f0cccf6512dad3/grails-core-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-gsp/3.2.8/382026008c52e89bc1c73e60e7e9dfcf667bce8/grails-plugin-gsp-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-testing/3.2.8/e9e700b0f37f902d930cde33f89726469c4d3a6a/grails-plugin-testing-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web/3.2.8/13c4ecb88bcac1cff657a9fe490b8bb98839d429/grails-web-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-domain-class/3.2.8/9840db0f11bf1edc1003fa7fe56dff9cb32c78e/grails-plugin-domain-class-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-services/3.2.8/b6d2b6ff49583da305df61c8f2534fa42e810bc9/grails-plugin-services-3.2.8.jar!/META-INF/grails.factories" />
                   <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-validation/3.2.8/176bdf11c9c75ffc193e18c0054de3e31cd0b952/grails-validation-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-taglib/3.2.8/9e6883602bf8080746ca37b831c160c61eeff86e/grails-web-taglib-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-interceptors/3.2.8/848a6cb064154dfcc076fdba02fdc722396d2c17/grails-plugin-interceptors-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-async/3.2.8/f6dfa7e21767d8f85045144653414c6f2835ef8e/grails-plugin-async-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/cache/3.0.3/e857268f939b4b907ce91ff4f5217cfb97abcaa7/cache-3.0.3.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-databinding/3.2.8/881b34891895e045e5e4a6126539e7ec8f1b7461/grails-web-databinding-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-url-mappings/3.2.8/9557090de58324274c858a23bae526c5a1f60dca/grails-web-url-mappings-3.2.8.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/hibernate5/6.0.9/61755678567dd72f1d6f8dd7f9cba3f832ee2090/hibernate5-6.0.9.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-datastore-gorm-support/6.0.9.RELEASE/8250e3b6f4691637ffd8e4958f4b06b25a2f0aaa/grails-datastore-gorm-support-6.0.9.RELEASE.jar!/META-INF/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-url-mappings/3.2.8/9557090de58324274c858a23bae526c5a1f60dca/grails-web-url-mappings-3.2.8.jar!/META-INF/services/grails.factories" />
+                  <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-codecs/3.2.8/f87800895a347f7aedfa3b5f31573b8d85c43ee2/grails-plugin-codecs-3.2.8.jar!/META-INF/grails.factories" />
                   <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-common/3.2.8/9d153dac3993beb96625fa0a2d2cefe77079335/grails-web-common-3.2.8.jar!/META-INF/grails.factories" />
                 </list>
               </option>
@@ -2132,35 +2165,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/ReadingItemController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/sun/font/Underline.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="57" column="25" lean-forward="false" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/login/_loginform.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2199,7 +2204,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="20" lean-forward="false" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2239,7 +2243,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
           <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2293,9 +2296,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding>
-            <element signature="e#29#75#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2303,10 +2303,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
-          <folding>
-            <marker date="1494741006227" expanded="false" signature="340:356" ph="..." />
-            <marker date="1494741006227" expanded="false" signature="433:488" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2322,7 +2318,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2330,7 +2325,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2350,14 +2344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/LoginCheckInterceptor.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -2370,23 +2356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/TopicController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="52" column="16" lean-forward="false" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/services/com/ttn/linksharing/SendInvitationService.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2394,7 +2363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2402,10 +2370,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-          <folding>
-            <marker date="1494769615036" expanded="true" signature="97:1747" ph="..." />
-            <marker date="1494769615036" expanded="true" signature="161:1739" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2413,7 +2377,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2421,7 +2384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2445,7 +2407,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2453,7 +2414,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2461,7 +2421,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="59">
           <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2472,14 +2431,6 @@
           <folding>
             <element signature="e#21#64#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/LoginController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="48" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2495,7 +2446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="58" lean-forward="true" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2522,7 +2472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
           <caret line="28" column="56" lean-forward="false" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2536,11 +2485,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/user/_userInfo.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="31" column="56" lean-forward="true" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
-          <folding>
-            <marker date="1494783662081" expanded="true" signature="577:1656" ph="..." />
-          </folding>
+        <state relative-caret-position="465">
+          <caret line="31" column="56" lean-forward="false" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2548,6 +2495,72 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="86" column="22" lean-forward="false" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="43" lean-forward="false" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/ttn/linksharing/LoginCheckInterceptorSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/LoginCheckInterceptor.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="74" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/com/ttn/linksharing/SendMailService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/TopicController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/login/_loginform.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="75" lean-forward="false" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/com/ttn/linksharing/LoginController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="74" column="26" lean-forward="false" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/login/forgotpassword.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>

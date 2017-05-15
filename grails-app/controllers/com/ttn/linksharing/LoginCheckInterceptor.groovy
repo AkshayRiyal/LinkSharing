@@ -4,10 +4,11 @@ package com.ttn.linksharing
 class LoginCheckInterceptor {
     
     LoginCheckInterceptor() {
-      matchAll().excludes(controller: "login")
-                 .excludes(controller:'resource',action:'show')
-                  .excludes(controller:'documentResource')
-                  .excludes(controller:'topic',action:'show')
+        matchAll().excludes(controller: "login")
+                .excludes(controller: 'resource', action: 'show')
+                .excludes(controller: 'documentResource')
+                .excludes(controller: 'topic', action: 'show')
+                .excludes(controller: 'resource', action: 'searchByQuery')
     }
     
     boolean before() {

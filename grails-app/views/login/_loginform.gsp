@@ -12,7 +12,7 @@
                 <div class="checkbox">
                     <button class="btn btn-info" type="submit">Sign-in</button>
                     <label>
-                        <a>Forgot-Password</a>
+                        <a href="/login/forgotPassword">Forgot-Password</a>
                     </label>
                 </div>
             </form>

@@ -8,7 +8,7 @@ import org.springframework.context.MessageSource
 
 class TopicController {
     TopicService topicService
-    def sendInvitationService
+    def sendMailService
     
     def show(ResourceSearchCO co) {
         Topic topic = Topic.read(co.topicId)
@@ -52,9 +52,10 @@ class TopicController {
     
     def sendInvitation(int topicId, String email) {
         if (topicId && email) {
+            Topic topic = Topic.get(topicId)
+            String mailBody="Hey Buddy, just found this interesting topic : " + topic.name+" on linksharing."
             
-            Topic topic=Topic.get(topicId)
-            sendInvitationService.sendInvitation(topic,User.findByUserName(session.user),email)
+            sendMailService.sendInvitation( User.findByUserName(session.user).email, email,mailBody,"LinkSharing Invitation")
             flash.message = "Invitation will be sent shortly."
             redirect(controller: 'user', action: 'dashboard')
         } else {
@@ -62,5 +63,4 @@ class TopicController {
             redirect(controller: 'user', action: 'dashboard')
         }
     }
-    
 }
