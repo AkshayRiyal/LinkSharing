@@ -1,5 +1,5 @@
 <!--Login Form-->
-<div class="container-fluid col-md-4 col-sm-12 col-xs-12 pull-right my-panel">
+<div class="container-fluid  col-sm-12 col-xs-12 pull-right my-panel">
 
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -12,7 +12,7 @@
                 <div class="checkbox">
                     <button class="btn btn-info" type="submit">Sign-in</button>
                     <label>
-                        <a>Forgot-Password</a>
+                        <a href="/login/forgotPassword">Forgot-Password</a>
                     </label>
                 </div>
             </form>

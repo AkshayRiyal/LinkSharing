@@ -10,17 +10,16 @@ class DocumentResourceController {
     def download(int resourceId) {
         Resource resource = Resource.get(resourceId)
         def file = new File(resource.filePath)
-        println("Inside DC")
+        
         if (file.exists()) {
             response.setContentType("application/octet-stream")
             response.setHeader("Content-disposition", "attachment;filename=\"${file.name}\"")
             response.outputStream << file.bytes
-        println("if ")
+       
         } else
         {
             flash.error="Error Downloading Post"
             redirect(controller: 'user', action: 'dashboard')
-            println("else ")
         }// appropriate error handling
     }
     

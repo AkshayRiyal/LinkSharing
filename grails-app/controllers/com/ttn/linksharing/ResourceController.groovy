@@ -11,13 +11,13 @@ class ResourceController {
         try {
             Resource resource = Resource.load(resourceId)
             resource.delete(flush: true)
-           flash.message= "Post Deleted"
+            flash.message = "Post Deleted"
         }
         catch (ObjectNotFoundException e) {
             flash.error = "Resource DoesNot Exist."
         }
-        finally{
-            redirect(controller: 'user',action: 'dashboard')
+        finally {
+            redirect(controller: 'user', action: 'dashboard')
         }
     }
     
@@ -30,13 +30,12 @@ class ResourceController {
     }
     
     def searchByQuery(String query) {
-        println("--------------------Inside Search By Query")
         if (query || (session['user'] && User.findByUserName(session['user']).admin && !query)) {
             log.info("validated")
-            List<Resource> resource=Resource.findResourceByQuery(query)
-            println("Search Result ${resource}")
+            List<Resource> resource = Resource.findResourceByQuery(query)
+            
             render(view: '/resource/search', model: [searchResources: resource,
-                                            query          : query])
+                                                     query          : query])
         } else {
             flash.error = "Enter some text in searchBox"
             redirect(action: "index", controller: 'login')

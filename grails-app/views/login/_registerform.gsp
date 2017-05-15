@@ -1,5 +1,5 @@
 <!--Registeration Form -->
-<div class="container-fluid col-md-4 col-sm-12 col-xs-12 pull-right my-panel">
+<div class="container-fluid  col-sm-12 col-xs-12 pull-right my-panel">
     <div class="signup-validation-msg">
         <g:if test="${flash.signupError}">
             <div class="alert alert-danger">

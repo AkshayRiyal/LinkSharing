@@ -5,7 +5,7 @@ import com.ttn.linksharing.vo.ResourceVO
 import com.ttn.linksharing.vo.TopicVO
 
 class LoginController {
-    
+    def sendMailService
     
     def index() {
         
@@ -67,5 +67,23 @@ class LoginController {
         }
         
     }
-    
+    def forgotPassword()
+    {
+        render(view:'/login/forgotpassword')
+    }
+    def forgotPasswordMail(String email)
+    {
+       User user= User.findByEmail(email)
+        if(user)
+        {
+            String body="You Password is ${user.password}"
+            String subject="LinkSharing Forgot Password"
+     sendMailService.sendInvitation("akshay.riyal@tothenew.com",email,body,subject)
+            flash.message="Password will be sent on mail"
+        }
+        else{
+            flash.error="Email is not registered"
+        }
+        redirect(view: "/login/forgotPassword")
+    }
 }

@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand mybrand" href="#"><u>LinkSharing</u></a>
+            <a class="navbar-brand mybrand" href="/user/dashboard"><u>LinkSharing</u></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -67,7 +67,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">${session.user} <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/user/profile">Profile</a></li>
+                            <li><a href="/user/profile"><ls:displayProfileOnNavbar/></a></li>
                             <li><a href="/user/edit">Edit</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="/login/logOut">Logout</a></li>

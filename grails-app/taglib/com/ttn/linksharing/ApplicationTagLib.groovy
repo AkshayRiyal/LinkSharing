@@ -18,11 +18,11 @@ class ApplicationTagLib {
                 eq('id', topicId)
             }
         } : 0
-    /*    String url = createLink(controller: 'subscription', action: 'index', params: ['topicId': topicId])
-        out << "<a href='${url}'>${subscriptionCount}</a>"
-    */
+        /*    String url = createLink(controller: 'subscription', action: 'index', params: ['topicId': topicId])
+            out << "<a href='${url}'>${subscriptionCount}</a>"
+        */
         out << "${subscriptionCount}"
-    
+        
     }
     def getTopPost = {
         out << render(template: '/topic/topshare', model: [resourceVOs: Resource.getTopPost()])
@@ -69,9 +69,9 @@ class ApplicationTagLib {
                 eq('id', topicId)
             }
         } : 0
-       /* String url = createLink(controller: 'resource', action: 'show', params: ['topicId': topicId])
-        out << "<a href='${url}'>${postCount}</a> "
-       */ out << "${postCount}"
+        /* String url = createLink(controller: 'resource', action: 'show', params: ['topicId': topicId])
+         out << "<a href='${url}'>${postCount}</a> "
+        */ out << "${postCount}"
     }
     
     def getsearchedtopic = { attrs ->
@@ -133,25 +133,45 @@ class ApplicationTagLib {
     def isResourceDeletable = { attrs ->
         User user = User.findByUserName(session.user)
         Resource resource = attrs.resource
-        if(user== resource.createdBy)
-                {
-                  String url=  createLink(controller: 'resource' ,action: 'delete',params:[resourceId:resource.id] )
-                    out << "<a href='${url}'>Delete</a>"
-                }
+        if (user == resource.createdBy) {
+            String url = createLink(controller: 'resource', action: 'delete', params: [resourceId: resource.id])
+            out << "<a href='${url}'>Delete</a>"
+        }
         
         
     }
     def isResourceEditable = { attrs ->
         User user = User.findByUserName(session.user)
         Resource resource = attrs.resource
-        if(user == resource.createdBy)
-                {
-                    String url=  createLink(controller: 'resource' ,action: 'edit',params:[resourceId:resource.id] )
-                    out << "<a href='${url}'>Edit</a>"
-                }
+        if (user == resource.createdBy) {
+            String url = createLink(controller: 'resource', action: 'edit', params: [resourceId: resource.id])
+            out << "<a href='${url}'>Edit</a>"
+        }
         
         
     }
+    
+    def displayProfileOnNavbar = { attr ->
+        User user = User.findByUserName(session.user)
+        
+        String url = createLink(controller: 'user', action: 'profile', params: [userId: user.id])
+        out << "<a href='${url}'>Profile</a>"
+    }
+    
+    
+    def isSubscribed={attr,body->
+        User user = User.findByUserName(session.user)
+        Resource resource= Resource.get(attr.resourceId)
+        if(user&&resource&&Subscription.countByTopicAndUser(resource.topic,user))
+        {
+            out<<body()
+        }
+        else
+        {
+            out<<""
+        }
+    }
+    
     
 }
     

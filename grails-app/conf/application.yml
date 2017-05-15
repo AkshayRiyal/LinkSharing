@@ -140,3 +140,8 @@ grails:
         mail.smtp.socketFactory.port: "465"
         mail.smtp.socketFactory.class: "javax.net.ssl.SSLSocketFactory"
         mail.smtp.socketFactory.fallback: "false"
+grails:
+   controllers:
+       upload:
+           maxFileSize: 31457280
+           maxRequestSize: 31457280

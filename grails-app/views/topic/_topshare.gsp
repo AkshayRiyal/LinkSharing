@@ -1,7 +1,7 @@
 <%@ page import="com.ttn.linksharing.vo.ResourceVO;" %>
 <!--TOp SHare-->
 
-<div class="container-fluid col-md-7 col-sm-12 col-xs-12 pull-left my-panel">
+<div class="container-fluid  col-sm-12 col-xs-12 pull-left my-panel">
     <div class="panel panel-default">
         <div class="panel-heading">
             <span class="panel-title">Top Shares</span>

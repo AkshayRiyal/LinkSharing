@@ -11,7 +11,7 @@
                     </div>
 
                     <div class="col-sm-3">
-                        <h5>${resource.createdBy.fullName}</h5>
+                        <a href="/user/profile?userId=${resource.createdBy.id}">    <h5>${resource.createdBy.fullName}</h5></a>
 
                     </div>
 

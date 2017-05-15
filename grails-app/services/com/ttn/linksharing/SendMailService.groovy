@@ -3,17 +3,17 @@ package com.ttn.linksharing
 import grails.transaction.Transactional
 
 @Transactional
-class SendInvitationService {
+class SendMailService {
     def mailService
     
-    def sendInvitation(Topic topic, User user, String email) {
+    def sendInvitation(String fromMail, String toMail,String mailBody,String mailSubject) {
         try {
             sendMail {
                 mailService.sendMail {
-                    to email
-                    from user.email
-                    subject "LinkSharing Invitation"
-                    body "Hey Buddy, just found this interesting topic : " + topic.name+" on linksharing."
+                    to toMail
+                    from fromMail
+                    subject mailSubject
+                    body mailBody
                 }
                 return "Success"
             }
