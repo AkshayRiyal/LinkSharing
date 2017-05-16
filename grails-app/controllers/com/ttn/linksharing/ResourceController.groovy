@@ -54,8 +54,23 @@ class ResourceController {
         render Resource.getTopPost()
     }
     
-    def update(int id) {
-        Resource resource = Resource.get(id);
+    def update(String newDescription,int resourceId) {
+        Resource resource = Resource.get(resourceId);
+        if(resource)
+        {
+            resource.description=newDescription
+            if(resource.save(flush:true))
+            {
+                flash.message="Resource Updated"
+            }
+            else{
+                flash.message="Resource Updation Failed"
+    
+            }
+            
+        }
+        redirect(controller: 'user',action: 'dashboard')
+    
     }
     
     

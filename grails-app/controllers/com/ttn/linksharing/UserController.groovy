@@ -1,6 +1,7 @@
 package com.ttn.linksharing
 
 import com.ttn.linksharing.co.SearchCO
+import com.ttn.linksharing.co.UserCo
 import grails.converters.JSON
 import org.hibernate.criterion.Projection
 
@@ -33,6 +34,12 @@ class UserController {
         user.lastName = params.lname
         user.firstName = params.fname
         user.userName = params.uname
+    
+        def file = request.getFile('image')
+        if(file){
+            user.photo = file.getBytes()
+        }
+    
         if (user.save(flush: true)) {
             flash.message = "Info updated."
             session.user = params.uname
@@ -71,13 +78,13 @@ class UserController {
         }
     }
     
-    def adminPanel(Integer offset,int max) {
-        if(!offset)
-            offset=0
+    def adminPanel(SearchCO co) {
+        if(!co.offset)
+            co.offset=0
         
         User user = User.findByUserName(session.user)
         if (user.admin) {
-            List<User> userList = User.createCriteria().list(offset:offset,max:5){eq("admin",false)}
+            List<User> userList = User.createCriteria().list(sort:co.sort,order:co.order,offset:co.offset,max:5){eq("admin",false)}
             render(view: 'admin', model: [userList: userList])
         } else {
             redirect(controller: "user", action: "dashboard")
@@ -87,7 +94,7 @@ class UserController {
     def activate(int userId, int status) {
         
         User user = User.get(userId)
-        println(userId+"------"+status)
+       
         if (user) {
             if (status) {
                 user.active = true

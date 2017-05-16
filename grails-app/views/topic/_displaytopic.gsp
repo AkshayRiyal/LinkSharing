@@ -3,14 +3,15 @@
 <div class="panel-body">
 
     <g:each in="${topics}" var="topic">
-        <div class="row well">
+        <div class="row well myTopic">
             <div class="col-sm-3">
-                <asset:image src="user_img_default.png" class="user_img"/>
+                <ls:userImage userId="${topic.createdBy.id}"/>
             </div>
-            %{--   point to check--}%
             <div class="col-sm-7">
                 <div class="row">
-                    <div class="col-sm-6"><a href="/user/profile?userId=${topic.createdBy.id}"><h4>${topic.createdBy.fullName}</h4></a></div>
+                    <div class="col-sm-6"><a
+                            href="/user/profile?userId=${topic.createdBy.id}"><h4>${topic.createdBy.fullName}</h4></a>
+                    </div>
 
                     <div class="col-sm-4"><h5>Subscriptions</h5></div>
 
@@ -43,14 +44,16 @@
                 </div>
 
             </div>
-            <div class="row">
-               <div class="col-sm-9 pull-right " id="topicTextBox" style="display: none" >
-                   <g:form controller="topic" action="update">
-                       <input type="text" value="${topic.name}" name="${topic.id}"/>
-                       <input type="submit" value="Update" />
-                   </g:form>
 
-               </div>
+            <div class="row">
+                <div class="col-sm-9 pull-right topicEditDiv" style="display: none">
+                    <g:form controller="topic" action="update">
+                        <input type="text" value="${topic.name}" name="newTopicName"/>
+                        <input type="hidden" name="topicId" value="${topic.id}">
+                        <input type="submit" value="Update"/>
+                    </g:form>
+
+                </div>
             </div>
             <ls:canEdit topic="${topic}"/>
         </div>

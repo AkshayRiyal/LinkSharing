@@ -7,33 +7,45 @@
 </head>
 
 <body>
-<div class="container-fluid col-md-5 col-sm-12 col-xs-12 pull-left my-panel">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <span class="panel-title">Topic:${topic}</span>
+<div class="container-fluid  col-sm-12 col-xs-12  my-panel">
+    <div class="container-fluid col-md-5 col-sm-12 col-xs-12 pull-left my-panel">
+        <div class="row">
+            <div class="container-fluid col-sm-12 col-xs-12  my-panel">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span class="panel-title">Topic:${topic}</span>
+                    </div>
+                    <ls:getsearchedtopic topic='${topic}'/>
+                </div>
+            </div>
         </div>
-        <ls:getsearchedtopic topic='${topic}'/>
+
+        <div class="row">
+            <div class="container-fluid col-sm-12 col-xs-12  my-panel">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span class="panel-title">Users</span>
+                    </div>
+
+                    <ls:getsearchedtopicsubscribeduser topic="${topic}"/>
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-</div>
 
-<div class="container-fluid col-md-6 col-sm-12 col-xs-12 pull-right my-panel">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <span class="panel-title">Posts</span>
+    <div class="container-fluid col-md-7 col-sm-12 col-xs-12 pull-right my-panel">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span class="panel-title">Posts</span>
+            </div>
+
+
+            <ls:getsearchedtopicresources topic="${topic}"/>
+
         </div>
-
-
-<ls:getsearchedtopicresources topic="${topic}"/>
-
-    </div>
-</div>
-<div class="container-fluid col-md-5 col-sm-12 col-xs-12 pull-left my-panel">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <span class="panel-title">Users</span>
-        </div>
-
-<ls:getsearchedtopicsubscribeduser topic="${topic}"/>
     </div>
 </div>
 </body>

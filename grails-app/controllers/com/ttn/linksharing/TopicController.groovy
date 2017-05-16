@@ -63,4 +63,17 @@ class TopicController {
             redirect(controller: 'user', action: 'dashboard')
         }
     }
+    def update(String newTopicName,int topicId)
+    {
+        Topic topic=Topic.get(topicId)
+        if(topic)
+        {
+            topic.name=newTopicName
+            if(topic.save(flush:true))
+            {
+                flash.message="Topic Updated"
+            }
+        }
+        redirect(controller: 'user',action: 'dashboard')
+    }
 }

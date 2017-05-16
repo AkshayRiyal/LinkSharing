@@ -8,6 +8,7 @@ class ResourceRatingController {
         User user = User.findByUserName(session.user)
         Resource resource = Resource.get(resourceId)
         ResourceRating resourceRating = ResourceRating.findByUserAndResource(user, resource)
+        
         if (resourceRating) {
             resourceRating.score = score
         } else {

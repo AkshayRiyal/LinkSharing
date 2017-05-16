@@ -58,7 +58,7 @@ class LoginController {
             user.admin = false
             user.active = false
             def file = request.getFile('image')
-            if(file){
+            if (file) {
                 user.photo = file.getBytes()
             }
             user.save(flush: true)

@@ -1,5 +1,6 @@
 package com.ttn.linksharing
 
+import com.ttn.linksharing.vo.RatingInfoVO
 import com.ttn.linksharing.vo.ResourceVO
 import com.ttn.linksharing.vo.TopicVO
 
@@ -98,7 +99,7 @@ class ApplicationTagLib {
                 Topic topic = Topic.get(attrs.topicId)
                 if (topic.createdBy != User.findByUserName(session.user)) {
                     Subscription subscription = Subscription.findByTopicAndUser(topic, User.findByUserName(session.user))
-                    log.info(" in topicSubscribed : $topic $subscription")
+                  
                     if (subscription) {
                         out << "<a href='${createLink(controller: 'subscription', action: 'delete', params: [topicId: attrs.topicId])}'>UnSubscribe</a>"
 // out << "<a href='javascript:void(0)' onclick='updateSubscription(${attrs.topicId},deleteSubscription)'>Unsubscribe</a> "
@@ -113,18 +114,19 @@ class ApplicationTagLib {
     def canEdit = { attrs ->
         User user = User.findByUserName(session.user)
         if (user == attrs.topic.createdBy) {
-            out << " <div class=\"row pull-right\">\n" +
-                    "            <div class=\"col-sm-1\">\n" +
-                    "            <a href=\"\"> <span class=\"glyphicon glyphicon-envelope\"></span></a>\n" +
-                    "            </div>\n" +
-                    "\n" +
-                    "                    <div class=\"col-sm-1\">\n" +
-                    "                        <a href=\"\"> <span class=\"glyphicon glyphicon-pencil\"></span></a>\n" +
-                    "                    </div>\n" +
-                    "            <div class=\"col-sm-1\">\n" +
-                    "            <a href=\"/topic/delete?topicId=${attrs.topic.id}\"> <span class=\"glyphicon glyphicon-trash\"></span></a>\n" +
-                    "            </div>\n" +
-                    "                    </div>  "
+           
+           
+            out << "<div class=\"row pull-right\">'\n" +
+                    "<div class=\"col-sm-1\">\n" +
+                    "<a href=\"#invitation\" data-toggle=\"modal\"> <span class=\"glyphicon glyphicon-envelope\"></span></a>\n" +
+                    "</div>\n" +
+                    "<div class=\"col-sm-1\">\n" +
+                    "<a  class=\"edit\"> <span class=\"glyphicon glyphicon-pencil\"></span></a>\n" +
+                    "</div>\n" +
+                    "<div class=\"col-sm-1\">\n" +
+                    "<a href=\"/topic/delete?topicId=${attrs.topic.id}\"> <span class=\"glyphicon glyphicon-trash\"></span></a>\n" +
+                    "</div>\n" +
+                    "</div>"
         }
         
         
@@ -147,7 +149,7 @@ class ApplicationTagLib {
         if(user == resource.createdBy)
                 {
                     String url=  createLink(controller: 'resource' ,action: 'edit',params:[resourceId:resource.id] )
-                    out << "<a href='${url}'>Edit</a>"
+                    out << "<a class='editResource'>Edit</a>"
                 }
         
         
@@ -174,6 +176,27 @@ class ApplicationTagLib {
         User user = User.get(attrs.userId)
         out << "<img class=\"user_img media-object recent-media-object-custom\" " +
                 "src=\"${createLink(controller: 'user', action: 'image', params: [userId: attrs.userId])}\">"
+    }
+    def getResourceCount= { attrs ->
+        RatingInfoVO infoVO = Resource.getRatingInformation(attrs.resourceId)
+        String html = ""
+    
+        if (infoVO!=null) {
+        int avgScore = infoVO.averageScore
+        while (avgScore-- >= 1) {
+        
+            html += "<span class=\"glyphicon glyphicon-star\"/>"
+        }
+    
+        int emptystar = (5.0 - infoVO.averageScore)
+        while ((emptystar--) > 0.0) {
+            html += "<span class=\"glyphicon glyphicon-star-empty\"/>"
+        }
+    
+    
+       
+    }
+        out << html
     }
     
 }

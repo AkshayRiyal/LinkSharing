@@ -1,6 +1,6 @@
 <div class="panel-body">
 
-    <g:form class="form-horizontal" controller="user" action="updateInfo"  method="post">
+    <g:uploadForm class="form-horizontal" controller="user" action="updateInfo"  method="post">
         <div class="form-group">
             <label for="firstName" class="col-sm-2 control-label"><p align="left">FirstName</p></label>
             <div class="col-sm-10">
@@ -23,7 +23,7 @@
         <div class="form-group">
             <label for="profileImage" class="col-sm-2 control-label"><p align="left">Photo</p></label>
             <div class="col-sm-10">
-                <input type="file" class="form-control" id="profileImage" placeholder="FirstName">
+                <input type="file" name="image" class="form-control" id="profileImage" placeholder="FirstName">
             </div>
         </div>
 
@@ -35,6 +35,6 @@
         </div>
 
 
-    </g:form>
+    </g:uploadForm>
 
 </div>

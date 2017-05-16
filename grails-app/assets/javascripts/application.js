@@ -24,6 +24,18 @@ function insertRating(rId,score) {
         }
     });
 }
+$(".edit").on('click', function (event) {
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+    $(this).closest('.myTopic').find(".topicEditDiv").show();
+});
+
+$(".editResource").on('click', function (event) {
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+    $(this).closest('.myResource').find(".resourceEditDiv").show();
+});
+
 
 if (typeof jQuery !== 'undefined') {
     (function ($) {

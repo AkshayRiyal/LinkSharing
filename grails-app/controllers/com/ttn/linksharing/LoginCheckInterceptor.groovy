@@ -9,6 +9,7 @@ class LoginCheckInterceptor {
                 .excludes(controller: 'documentResource')
                 .excludes(controller: 'topic', action: 'show')
                 .excludes(controller: 'resource', action: 'searchByQuery')
+        .excludes (controller:'user',action:'image')
     }
     
     boolean before() {

@@ -40,6 +40,7 @@ abstract class Resource {
     
     
     static RatingInfoVO getRatingInformation(long id) {
+       
         List result = Resource.createCriteria().list {
             projections {
                 resourceRatings {
@@ -50,9 +51,15 @@ abstract class Resource {
                 eq("id", id)
             }
         }
-        
-        println(result)
-        return new RatingInfoVO(totalVotes: result.get(0).getAt(0), totalScore: result.get(0).getAt(1), averageScore: result.get(0).getAt(2))
+    
+       
+        if (result.get(0).getAt(1)) {
+            return new RatingInfoVO(totalVotes: result.get(0).getAt(0), totalScore: result.get(0).getAt(1), averageScore: result.get(0).getAt(2))
+        }
+        else
+        {
+            return new RatingInfoVO()
+        }
     }
     
     
@@ -89,7 +96,7 @@ abstract class Resource {
                 
             }
             order("lastUpdated", "desc")
-            maxResults 3 // This is just for pagination
+            maxResults 5 // This is just for pagination
             firstResult 0
         }
         List<ResourceVO> resourceVOList = []
