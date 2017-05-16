@@ -10,7 +10,8 @@ class UserController {
     def assetResourceLocator
     
     def dashboard(SearchCO co) {
-        
+        if(!co)
+            co=new SearchCO()
         User user = User.findByUserName(session.user)
         List msgList = user.getUnReadResources(co)
         List<Topic> topicList = User.getSubscribedTopics(user)
@@ -18,7 +19,8 @@ class UserController {
         List<User> userList = []
         
         userList.add(User.findByUserName(session.user))
-        render(view: "/user/dashboard", model: [msgList: msgList, post: topicList, userList: userList])
+        log.info("${ReadingItem.countByUserAndIsRead(user,false)}")
+        render(view: "/user/dashboard", model: [msgList: msgList,count:ReadingItem.countByUserAndIsRead(user,false), post: topicList, userList: userList])
     }
     
     def edit() {

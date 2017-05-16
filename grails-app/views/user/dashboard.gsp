@@ -1,4 +1,4 @@
-<%@ page import="com.ttn.linksharing.vo.TopicVO" %>
+<%@ page import="com.ttn.linksharing.Resource; com.ttn.linksharing.vo.TopicVO" %>
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
@@ -17,6 +17,7 @@
                 </div>
 
                 <g:render template="showresource" model="[msgList: msgList]"/>
+                <g:paginate total="${count}" max="5"/>
             </div>
         </div>
 

@@ -8,16 +8,18 @@ class SendMailService {
     
     def sendInvitation(String fromMail, String toMail,String mailBody,String mailSubject) {
         try {
-            sendMail {
-                mailService.sendMail {
-                    to toMail
-                    from fromMail
-                    subject mailSubject
-                    body mailBody
+            runAsync {
+                sendMail {
+                    mailService.sendMail {
+                        to toMail
+                        from fromMail
+                        subject mailSubject
+                        body mailBody
+                    }
+                    return "Success"
                 }
-                return "Success"
+    
             }
-            
         }
         catch (Exception e)
         {

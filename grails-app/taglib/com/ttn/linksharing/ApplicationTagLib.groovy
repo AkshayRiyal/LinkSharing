@@ -185,12 +185,13 @@ class ApplicationTagLib {
         int avgScore = infoVO.averageScore
         while (avgScore-- >= 1) {
         
-            html += "<span class=\"glyphicon glyphicon-star\"/>"
+        
+            html +="    <span class=\"glyphicon glyphicon-star\"></span>"
         }
     
         int emptystar = (5.0 - infoVO.averageScore)
         while ((emptystar--) > 0.0) {
-            html += "<span class=\"glyphicon glyphicon-star-empty\"/>"
+            html += "    <span class=\"glyphicon glyphicon-star-empty\"></span>"
         }
     
     

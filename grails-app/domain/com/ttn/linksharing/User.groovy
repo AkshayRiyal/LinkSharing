@@ -63,9 +63,10 @@ class User {
     }
     
     List getUnReadResources(SearchCO co) {
+        
         List list = []
         if (co.q) {
-            list = User.createCriteria().list {
+            list = User.createCriteria().list(offset:co.offset,max:co.max) {
                 projections {
                     readingItems
                             {
@@ -86,12 +87,10 @@ class User {
                 
                 eq('id', this.id)
                 
-                maxResults 5
-                firstResult 0
             }
             
         } else {
-            list = User.createCriteria().list {
+            list = User.createCriteria().list(offset:co.offset,max:co.max) {
                 projections {
                     readingItems
                             {
@@ -102,8 +101,6 @@ class User {
                     eq('isRead', false)
                 }
                 eq('id', this.id)
-                maxResults 5
-                firstResult 0
             }
             
         }

@@ -3,24 +3,24 @@
     <div class="row">
         <div class="col-sm-12">
             <table class="table table-striped">
-                <th>
+                <tr>
                     <g:sortableColumn property="id" title="Id"/>
                     <g:sortableColumn property="userName" title="UserName"/>
                     <g:sortableColumn property="email" title="Email"/>
                     <g:sortableColumn property="firstName" title="FirstName"/>
                     <g:sortableColumn property="lastName" title="LastName"/>
                     <g:sortableColumn property="active" title="Active"/>
-                <th>Manage</th>
-                <th></th>
-                %{--   <th>Id</th>
-                   <th>UserName</th>
-                   <th>Email</th>
-                   <th>FirstName</th>
-                   <th>LastName</th>
-                   <th>Active</th>
-                   <th>Manage</th>
-                   <th></th>--}%
-            </tr>
+                    <a href="#"><th>Manage</th></a>
+                    <th></th>
+                    %{--   <th>Id</th>
+                       <th>UserName</th>
+                       <th>Email</th>
+                       <th>FirstName</th>
+                       <th>LastName</th>
+                       <th>Active</th>
+                       <th>Manage</th>
+                       <th></th>--}%
+                </tr>
                 <g:each in="${userList}" var="user">
                     <g:if test="${user.admin == false}">
                         <tr>
